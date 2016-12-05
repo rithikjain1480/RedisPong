@@ -1,0 +1,2517 @@
+Last login: Sun Dec  4 09:41:40 on ttys001
+Rithiks-Air:~ rithikjain$ wget http://download.redis.io/redis-stable.tar.gz
+--2016-12-04 09:47:07--  http://download.redis.io/redis-stable.tar.gz
+Resolving download.redis.io... 109.74.203.151
+Connecting to download.redis.io|109.74.203.151|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1571557 (1.5M) [application/x-gzip]
+Saving to: ‘redis-stable.tar.gz’
+
+redis-stable.tar.gz                                100%[==============================================================================================================>]   1.50M   980KB/s    in 1.6s    
+
+2016-12-04 09:47:10 (980 KB/s) - ‘redis-stable.tar.gz’ saved [1571557/1571557]
+
+Rithiks-Air:~ rithikjain$ tar xvzf redis-stable.tar.gz
+x redis-stable/
+x redis-stable/INSTALL
+x redis-stable/sentinel.conf
+x redis-stable/deps/
+x redis-stable/deps/update-jemalloc.sh
+x redis-stable/deps/geohash-int/
+x redis-stable/deps/geohash-int/geohash_helper.c
+x redis-stable/deps/geohash-int/geohash.c
+x redis-stable/deps/geohash-int/geohash.h
+x redis-stable/deps/geohash-int/geohash_helper.h
+x redis-stable/deps/geohash-int/Makefile
+x redis-stable/deps/jemalloc/
+x redis-stable/deps/jemalloc/INSTALL
+x redis-stable/deps/jemalloc/install-sh
+x redis-stable/deps/jemalloc/.autom4te.cfg
+x redis-stable/deps/jemalloc/coverage.sh
+x redis-stable/deps/jemalloc/configure.ac
+x redis-stable/deps/jemalloc/doc/
+x redis-stable/deps/jemalloc/doc/jemalloc.html
+x redis-stable/deps/jemalloc/doc/html.xsl.in
+x redis-stable/deps/jemalloc/doc/jemalloc.xml.in
+x redis-stable/deps/jemalloc/doc/manpages.xsl.in
+x redis-stable/deps/jemalloc/doc/stylesheet.xsl
+x redis-stable/deps/jemalloc/doc/jemalloc.3
+x redis-stable/deps/jemalloc/include/
+x redis-stable/deps/jemalloc/include/jemalloc/
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_macros.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_rename.sh
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_defs.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_mangle.sh
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_protos.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc_typedefs.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/internal/
+x redis-stable/deps/jemalloc/include/jemalloc/internal/valgrind.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/bitmap.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/qr.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/size_classes.sh
+x redis-stable/deps/jemalloc/include/jemalloc/internal/public_namespace.sh
+x redis-stable/deps/jemalloc/include/jemalloc/internal/extent.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/private_symbols.txt
+x redis-stable/deps/jemalloc/include/jemalloc/internal/util.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_macros.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/quarantine.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_defs.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/internal/stats.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/atomic.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/huge.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/ctl.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/chunk.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/tsd.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/rtree.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/ql.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/pages.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/tcache.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/mb.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/chunk_dss.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/private_namespace.sh
+x redis-stable/deps/jemalloc/include/jemalloc/internal/chunk_mmap.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/mutex.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/private_unnamespace.sh
+x redis-stable/deps/jemalloc/include/jemalloc/internal/public_unnamespace.sh
+x redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal.h.in
+x redis-stable/deps/jemalloc/include/jemalloc/internal/ckh.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/prng.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/rb.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/arena.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/base.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/hash.h
+x redis-stable/deps/jemalloc/include/jemalloc/internal/prof.h
+x redis-stable/deps/jemalloc/include/jemalloc/jemalloc.sh
+x redis-stable/deps/jemalloc/include/msvc_compat/
+x redis-stable/deps/jemalloc/include/msvc_compat/windows_extra.h
+x redis-stable/deps/jemalloc/include/msvc_compat/strings.h
+x redis-stable/deps/jemalloc/include/msvc_compat/C99/
+x redis-stable/deps/jemalloc/include/msvc_compat/C99/stdbool.h
+x redis-stable/deps/jemalloc/include/msvc_compat/C99/stdint.h
+x redis-stable/deps/jemalloc/.gitattributes
+x redis-stable/deps/jemalloc/autogen.sh
+x redis-stable/deps/jemalloc/config.guess
+x redis-stable/deps/jemalloc/src/
+x redis-stable/deps/jemalloc/src/mb.c
+x redis-stable/deps/jemalloc/src/chunk_dss.c
+x redis-stable/deps/jemalloc/src/base.c
+x redis-stable/deps/jemalloc/src/prof.c
+x redis-stable/deps/jemalloc/src/huge.c
+x redis-stable/deps/jemalloc/src/ckh.c
+x redis-stable/deps/jemalloc/src/rtree.c
+x redis-stable/deps/jemalloc/src/mutex.c
+x redis-stable/deps/jemalloc/src/jemalloc.c
+x redis-stable/deps/jemalloc/src/bitmap.c
+x redis-stable/deps/jemalloc/src/valgrind.c
+x redis-stable/deps/jemalloc/src/util.c
+x redis-stable/deps/jemalloc/src/tsd.c
+x redis-stable/deps/jemalloc/src/atomic.c
+x redis-stable/deps/jemalloc/src/chunk.c
+x redis-stable/deps/jemalloc/src/stats.c
+x redis-stable/deps/jemalloc/src/quarantine.c
+x redis-stable/deps/jemalloc/src/pages.c
+x redis-stable/deps/jemalloc/src/tcache.c
+x redis-stable/deps/jemalloc/src/chunk_mmap.c
+x redis-stable/deps/jemalloc/src/hash.c
+x redis-stable/deps/jemalloc/src/ctl.c
+x redis-stable/deps/jemalloc/src/extent.c
+x redis-stable/deps/jemalloc/src/arena.c
+x redis-stable/deps/jemalloc/src/zone.c
+x redis-stable/deps/jemalloc/VERSION
+x redis-stable/deps/jemalloc/test/
+x redis-stable/deps/jemalloc/test/unit/
+x redis-stable/deps/jemalloc/test/unit/prof_accum.c
+x redis-stable/deps/jemalloc/test/unit/junk_free.c
+x redis-stable/deps/jemalloc/test/unit/SFMT.c
+x redis-stable/deps/jemalloc/test/unit/rb.c
+x redis-stable/deps/jemalloc/test/unit/ckh.c
+x redis-stable/deps/jemalloc/test/unit/size_classes.c
+x redis-stable/deps/jemalloc/test/unit/rtree.c
+x redis-stable/deps/jemalloc/test/unit/qr.c
+x redis-stable/deps/jemalloc/test/unit/junk_alloc.c
+x redis-stable/deps/jemalloc/test/unit/prof_thread_name.c
+x redis-stable/deps/jemalloc/test/unit/bitmap.c
+x redis-stable/deps/jemalloc/test/unit/util.c
+x redis-stable/deps/jemalloc/test/unit/tsd.c
+x redis-stable/deps/jemalloc/test/unit/atomic.c
+x redis-stable/deps/jemalloc/test/unit/stats.c
+x redis-stable/deps/jemalloc/test/unit/mallctl.c
+x redis-stable/deps/jemalloc/test/unit/quarantine.c
+x redis-stable/deps/jemalloc/test/unit/prof_reset.c
+x redis-stable/deps/jemalloc/test/unit/prof_idump.c
+x redis-stable/deps/jemalloc/test/unit/mtx.c
+x redis-stable/deps/jemalloc/test/unit/zero.c
+x redis-stable/deps/jemalloc/test/unit/ql.c
+x redis-stable/deps/jemalloc/test/unit/prof_active.c
+x redis-stable/deps/jemalloc/test/unit/hash.c
+x redis-stable/deps/jemalloc/test/unit/lg_chunk.c
+x redis-stable/deps/jemalloc/test/unit/math.c
+x redis-stable/deps/jemalloc/test/unit/mq.c
+x redis-stable/deps/jemalloc/test/unit/prof_gdump.c
+x redis-stable/deps/jemalloc/test/unit/junk.c
+x redis-stable/deps/jemalloc/test/integration/
+x redis-stable/deps/jemalloc/test/integration/overflow.c
+x redis-stable/deps/jemalloc/test/integration/xallocx.c
+x redis-stable/deps/jemalloc/test/integration/thread_tcache_enabled.c
+x redis-stable/deps/jemalloc/test/integration/posix_memalign.c
+x redis-stable/deps/jemalloc/test/integration/rallocx.c
+x redis-stable/deps/jemalloc/test/integration/thread_arena.c
+x redis-stable/deps/jemalloc/test/integration/chunk.c
+x redis-stable/deps/jemalloc/test/integration/allocated.c
+x redis-stable/deps/jemalloc/test/integration/MALLOCX_ARENA.c
+x redis-stable/deps/jemalloc/test/integration/sdallocx.c
+x redis-stable/deps/jemalloc/test/integration/mallocx.c
+x redis-stable/deps/jemalloc/test/integration/aligned_alloc.c
+x redis-stable/deps/jemalloc/test/include/
+x redis-stable/deps/jemalloc/test/include/test/
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params11213.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params1279.h
+x redis-stable/deps/jemalloc/test/include/test/mtx.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params132049.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params2281.h
+x redis-stable/deps/jemalloc/test/include/test/test.h
+x redis-stable/deps/jemalloc/test/include/test/btalloc.h
+x redis-stable/deps/jemalloc/test/include/test/mq.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params19937.h
+x redis-stable/deps/jemalloc/test/include/test/jemalloc_test.h.in
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params44497.h
+x redis-stable/deps/jemalloc/test/include/test/thd.h
+x redis-stable/deps/jemalloc/test/include/test/timer.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-alti.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params4253.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params216091.h
+x redis-stable/deps/jemalloc/test/include/test/math.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-sse2.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params607.h
+x redis-stable/deps/jemalloc/test/include/test/SFMT.h
+x redis-stable/deps/jemalloc/test/include/test/jemalloc_test_defs.h.in
+x redis-stable/deps/jemalloc/test/include/test/SFMT-params86243.h
+x redis-stable/deps/jemalloc/test/stress/
+x redis-stable/deps/jemalloc/test/stress/microbench.c
+x redis-stable/deps/jemalloc/test/src/
+x redis-stable/deps/jemalloc/test/src/SFMT.c
+x redis-stable/deps/jemalloc/test/src/btalloc.c
+x redis-stable/deps/jemalloc/test/src/test.c
+x redis-stable/deps/jemalloc/test/src/thd.c
+x redis-stable/deps/jemalloc/test/src/btalloc_1.c
+x redis-stable/deps/jemalloc/test/src/mtx.c
+x redis-stable/deps/jemalloc/test/src/btalloc_0.c
+x redis-stable/deps/jemalloc/test/src/math.c
+x redis-stable/deps/jemalloc/test/src/mq.c
+x redis-stable/deps/jemalloc/test/src/timer.c
+x redis-stable/deps/jemalloc/test/test.sh.in
+x redis-stable/deps/jemalloc/Makefile.in
+x redis-stable/deps/jemalloc/config.stamp.in
+x redis-stable/deps/jemalloc/jemalloc.pc.in
+x redis-stable/deps/jemalloc/README
+x redis-stable/deps/jemalloc/config.sub
+x redis-stable/deps/jemalloc/configure
+x redis-stable/deps/jemalloc/COPYING
+x redis-stable/deps/jemalloc/.gitignore
+x redis-stable/deps/jemalloc/ChangeLog
+x redis-stable/deps/jemalloc/bin/
+x redis-stable/deps/jemalloc/bin/jeprof.in
+x redis-stable/deps/jemalloc/bin/jemalloc-config.in
+x redis-stable/deps/jemalloc/bin/jemalloc.sh.in
+x redis-stable/deps/linenoise/
+x redis-stable/deps/linenoise/example.c
+x redis-stable/deps/linenoise/linenoise.c
+x redis-stable/deps/linenoise/README.markdown
+x redis-stable/deps/linenoise/linenoise.h
+x redis-stable/deps/linenoise/.gitignore
+x redis-stable/deps/linenoise/Makefile
+x redis-stable/deps/hiredis/
+x redis-stable/deps/hiredis/dict.h
+x redis-stable/deps/hiredis/hiredis.c
+x redis-stable/deps/hiredis/sdsalloc.h
+x redis-stable/deps/hiredis/CHANGELOG.md
+x redis-stable/deps/hiredis/zmalloc.h
+x redis-stable/deps/hiredis/fmacros.h
+x redis-stable/deps/hiredis/test.c
+x redis-stable/deps/hiredis/net.h
+x redis-stable/deps/hiredis/sds.c
+x redis-stable/deps/hiredis/examples/
+x redis-stable/deps/hiredis/examples/example-libev.c
+x redis-stable/deps/hiredis/examples/example.c
+x redis-stable/deps/hiredis/examples/example-libuv.c
+x redis-stable/deps/hiredis/examples/example-ae.c
+x redis-stable/deps/hiredis/examples/example-libevent.c
+x redis-stable/deps/hiredis/README.md
+x redis-stable/deps/hiredis/hiredis.h
+x redis-stable/deps/hiredis/COPYING
+x redis-stable/deps/hiredis/net.c
+x redis-stable/deps/hiredis/.travis.yml
+x redis-stable/deps/hiredis/.gitignore
+x redis-stable/deps/hiredis/adapters/
+x redis-stable/deps/hiredis/adapters/libev.h
+x redis-stable/deps/hiredis/adapters/libuv.h
+x redis-stable/deps/hiredis/adapters/libevent.h
+x redis-stable/deps/hiredis/adapters/ae.h
+x redis-stable/deps/hiredis/dict.c
+x redis-stable/deps/hiredis/Makefile
+x redis-stable/deps/hiredis/async.h
+x redis-stable/deps/hiredis/async.c
+x redis-stable/deps/hiredis/sds.h
+x redis-stable/deps/README.md
+x redis-stable/deps/lua/
+x redis-stable/deps/lua/INSTALL
+x redis-stable/deps/lua/doc/
+x redis-stable/deps/lua/doc/contents.html
+x redis-stable/deps/lua/doc/lua.1
+x redis-stable/deps/lua/doc/lua.html
+x redis-stable/deps/lua/doc/manual.html
+x redis-stable/deps/lua/doc/lua.css
+x redis-stable/deps/lua/doc/logo.gif
+x redis-stable/deps/lua/doc/readme.html
+x redis-stable/deps/lua/doc/luac.html
+x redis-stable/deps/lua/doc/cover.png
+x redis-stable/deps/lua/doc/luac.1
+x redis-stable/deps/lua/doc/manual.css
+x redis-stable/deps/lua/src/
+x redis-stable/deps/lua/src/lundump.h
+x redis-stable/deps/lua/src/lcode.c
+x redis-stable/deps/lua/src/lobject.h
+x redis-stable/deps/lua/src/lualib.h
+x redis-stable/deps/lua/src/loadlib.c
+x redis-stable/deps/lua/src/lcode.h
+x redis-stable/deps/lua/src/lauxlib.h
+x redis-stable/deps/lua/src/lzio.h
+x redis-stable/deps/lua/src/lmem.h
+x redis-stable/deps/lua/src/lfunc.h
+x redis-stable/deps/lua/src/ltable.c
+x redis-stable/deps/lua/src/lstring.c
+x redis-stable/deps/lua/src/lstring.h
+x redis-stable/deps/lua/src/llimits.h
+x redis-stable/deps/lua/src/lua.h
+x redis-stable/deps/lua/src/lapi.c
+x redis-stable/deps/lua/src/lstate.c
+x redis-stable/deps/lua/src/lzio.c
+x redis-stable/deps/lua/src/ltm.h
+x redis-stable/deps/lua/src/ldblib.c
+x redis-stable/deps/lua/src/lobject.c
+x redis-stable/deps/lua/src/ldebug.h
+x redis-stable/deps/lua/src/lvm.c
+x redis-stable/deps/lua/src/strbuf.h
+x redis-stable/deps/lua/src/ldo.h
+x redis-stable/deps/lua/src/ltable.h
+x redis-stable/deps/lua/src/lgc.h
+x redis-stable/deps/lua/src/strbuf.c
+x redis-stable/deps/lua/src/linit.c
+x redis-stable/deps/lua/src/lopcodes.h
+x redis-stable/deps/lua/src/liolib.c
+x redis-stable/deps/lua/src/lua_cmsgpack.c
+x redis-stable/deps/lua/src/lvm.h
+x redis-stable/deps/lua/src/ldump.c
+x redis-stable/deps/lua/src/lstate.h
+x redis-stable/deps/lua/src/ldebug.c
+x redis-stable/deps/lua/src/lgc.c
+x redis-stable/deps/lua/src/lparser.c
+x redis-stable/deps/lua/src/ldo.c
+x redis-stable/deps/lua/src/lua_cjson.c
+x redis-stable/deps/lua/src/ltablib.c
+x redis-stable/deps/lua/src/lauxlib.c
+x redis-stable/deps/lua/src/lundump.c
+x redis-stable/deps/lua/src/lmathlib.c
+x redis-stable/deps/lua/src/lbaselib.c
+x redis-stable/deps/lua/src/lparser.h
+x redis-stable/deps/lua/src/ltm.c
+x redis-stable/deps/lua/src/lua_struct.c
+x redis-stable/deps/lua/src/luaconf.h
+x redis-stable/deps/lua/src/fpconv.c
+x redis-stable/deps/lua/src/llex.c
+x redis-stable/deps/lua/src/lfunc.c
+x redis-stable/deps/lua/src/lua_bit.c
+x redis-stable/deps/lua/src/llex.h
+x redis-stable/deps/lua/src/lapi.h
+x redis-stable/deps/lua/src/fpconv.h
+x redis-stable/deps/lua/src/lua.c
+x redis-stable/deps/lua/src/loslib.c
+x redis-stable/deps/lua/src/lstrlib.c
+x redis-stable/deps/lua/src/Makefile
+x redis-stable/deps/lua/src/luac.c
+x redis-stable/deps/lua/src/lopcodes.c
+x redis-stable/deps/lua/src/print.c
+x redis-stable/deps/lua/src/lmem.c
+x redis-stable/deps/lua/test/
+x redis-stable/deps/lua/test/printf.lua
+x redis-stable/deps/lua/test/fib.lua
+x redis-stable/deps/lua/test/bisect.lua
+x redis-stable/deps/lua/test/fibfor.lua
+x redis-stable/deps/lua/test/cf.lua
+x redis-stable/deps/lua/test/sort.lua
+x redis-stable/deps/lua/test/globals.lua
+x redis-stable/deps/lua/test/sieve.lua
+x redis-stable/deps/lua/test/luac.lua
+x redis-stable/deps/lua/test/xd.lua
+x redis-stable/deps/lua/test/factorial.lua
+x redis-stable/deps/lua/test/readonly.lua
+x redis-stable/deps/lua/test/table.lua
+x redis-stable/deps/lua/test/README
+x redis-stable/deps/lua/test/echo.lua
+x redis-stable/deps/lua/test/trace-globals.lua
+x redis-stable/deps/lua/test/trace-calls.lua
+x redis-stable/deps/lua/test/env.lua
+x redis-stable/deps/lua/test/life.lua
+x redis-stable/deps/lua/test/hello.lua
+x redis-stable/deps/lua/HISTORY
+x redis-stable/deps/lua/COPYRIGHT
+x redis-stable/deps/lua/etc/
+x redis-stable/deps/lua/etc/min.c
+x redis-stable/deps/lua/etc/lua.ico
+x redis-stable/deps/lua/etc/noparser.c
+x redis-stable/deps/lua/etc/lua.pc
+x redis-stable/deps/lua/etc/strict.lua
+x redis-stable/deps/lua/etc/lua.hpp
+x redis-stable/deps/lua/etc/README
+x redis-stable/deps/lua/etc/luavs.bat
+x redis-stable/deps/lua/etc/Makefile
+x redis-stable/deps/lua/etc/all.c
+x redis-stable/deps/lua/README
+x redis-stable/deps/lua/Makefile
+x redis-stable/deps/Makefile
+x redis-stable/src/
+x redis-stable/src/redis-trib.rb
+x redis-stable/src/sparkline.h
+x redis-stable/src/dict.h
+x redis-stable/src/debug.c
+x redis-stable/src/aof.c
+x redis-stable/src/crc64.c
+x redis-stable/src/setproctitle.c
+x redis-stable/src/bitops.c
+x redis-stable/src/intset.h
+x redis-stable/src/lzf.h
+x redis-stable/src/sparkline.c
+x redis-stable/src/zipmap.c
+x redis-stable/src/replication.c
+x redis-stable/src/slowlog.h
+x redis-stable/src/latency.c
+x redis-stable/src/util.h
+x redis-stable/src/sdsalloc.h
+x redis-stable/src/ae.c
+x redis-stable/src/notify.c
+x redis-stable/src/redisassert.h
+x redis-stable/src/anet.c
+x redis-stable/src/ae_select.c
+x redis-stable/src/hyperloglog.c
+x redis-stable/src/rdb.c
+x redis-stable/src/latency.h
+x redis-stable/src/ziplist.c
+x redis-stable/src/zmalloc.h
+x redis-stable/src/t_set.c
+x redis-stable/src/testhelp.h
+x redis-stable/src/pubsub.c
+x redis-stable/src/debugmacro.h
+x redis-stable/src/rdb.h
+x redis-stable/src/bio.c
+x redis-stable/src/valgrind.sup
+x redis-stable/src/fmacros.h
+x redis-stable/src/memtest.c
+x redis-stable/src/rand.h
+x redis-stable/src/geo.c
+x redis-stable/src/ae_kqueue.c
+x redis-stable/src/scripting.c
+x redis-stable/src/help.h
+x redis-stable/src/util.c
+x redis-stable/src/zipmap.h
+x redis-stable/src/redis-benchmark.c
+x redis-stable/src/version.h
+x redis-stable/src/anet.h
+x redis-stable/src/ae_epoll.c
+x redis-stable/src/t_list.c
+x redis-stable/src/t_hash.c
+x redis-stable/src/intset.c
+x redis-stable/src/lzf_c.c
+x redis-stable/src/syncio.c
+x redis-stable/src/sha1.h
+x redis-stable/src/pqsort.h
+x redis-stable/src/redis-check-rdb.c
+x redis-stable/src/ziplist.h
+x redis-stable/src/server.c
+x redis-stable/src/cluster.h
+x redis-stable/src/sha1.c
+x redis-stable/src/config.h
+x redis-stable/src/sentinel.c
+x redis-stable/src/release.c
+x redis-stable/src/networking.c
+x redis-stable/src/lzfP.h
+x redis-stable/src/quicklist.h
+x redis-stable/src/t_string.c
+x redis-stable/src/endianconv.c
+x redis-stable/src/slowlog.c
+x redis-stable/src/object.c
+x redis-stable/src/solarisfixes.h
+x redis-stable/src/rand.c
+x redis-stable/src/rio.c
+x redis-stable/src/sds.c
+x redis-stable/src/cluster.c
+x redis-stable/src/rio.h
+x redis-stable/src/adlist.h
+x redis-stable/src/server.h
+x redis-stable/src/endianconv.h
+x redis-stable/src/pqsort.c
+x redis-stable/src/blocked.c
+x redis-stable/src/geo.h
+x redis-stable/src/bio.h
+x redis-stable/src/ae_evport.c
+x redis-stable/src/crc64.h
+x redis-stable/src/db.c
+x redis-stable/src/mkreleasehdr.sh
+x redis-stable/src/ae.h
+x redis-stable/src/zmalloc.c
+x redis-stable/src/.gitignore
+x redis-stable/src/t_zset.c
+x redis-stable/src/dict.c
+x redis-stable/src/quicklist.c
+x redis-stable/src/Makefile
+x redis-stable/src/multi.c
+x redis-stable/src/config.c
+x redis-stable/src/lzf_d.c
+x redis-stable/src/crc16.c
+x redis-stable/src/asciilogo.h
+x redis-stable/src/adlist.c
+x redis-stable/src/sort.c
+x redis-stable/src/redis-cli.c
+x redis-stable/src/sds.h
+x redis-stable/src/redis-check-aof.c
+x redis-stable/src/Makefile.dep
+x redis-stable/00-RELEASENOTES
+x redis-stable/runtest-sentinel
+x redis-stable/tests/
+x redis-stable/tests/unit/
+x redis-stable/tests/unit/aofrw.tcl
+x redis-stable/tests/unit/introspection.tcl
+x redis-stable/tests/unit/limits.tcl
+x redis-stable/tests/unit/latency-monitor.tcl
+x redis-stable/tests/unit/bitfield.tcl
+x redis-stable/tests/unit/sort.tcl
+x redis-stable/tests/unit/hyperloglog.tcl
+x redis-stable/tests/unit/scan.tcl
+x redis-stable/tests/unit/expire.tcl
+x redis-stable/tests/unit/scripting.tcl
+x redis-stable/tests/unit/slowlog.tcl
+x redis-stable/tests/unit/dump.tcl
+x redis-stable/tests/unit/protocol.tcl
+x redis-stable/tests/unit/geo.tcl
+x redis-stable/tests/unit/maxmemory.tcl
+x redis-stable/tests/unit/auth.tcl
+x redis-stable/tests/unit/quit.tcl
+x redis-stable/tests/unit/other.tcl
+x redis-stable/tests/unit/introspection-2.tcl
+x redis-stable/tests/unit/obuf-limits.tcl
+x redis-stable/tests/unit/memefficiency.tcl
+x redis-stable/tests/unit/type/
+x redis-stable/tests/unit/type/list.tcl
+x redis-stable/tests/unit/type/incr.tcl
+x redis-stable/tests/unit/type/string.tcl
+x redis-stable/tests/unit/type/list-2.tcl
+x redis-stable/tests/unit/type/zset.tcl
+x redis-stable/tests/unit/type/set.tcl
+x redis-stable/tests/unit/type/hash.tcl
+x redis-stable/tests/unit/type/list-3.tcl
+x redis-stable/tests/unit/type/list-common.tcl
+x redis-stable/tests/unit/keyspace.tcl
+x redis-stable/tests/unit/pubsub.tcl
+x redis-stable/tests/unit/printver.tcl
+x redis-stable/tests/unit/multi.tcl
+x redis-stable/tests/unit/bitops.tcl
+x redis-stable/tests/integration/
+x redis-stable/tests/integration/logging.tcl
+x redis-stable/tests/integration/aof-race.tcl
+x redis-stable/tests/integration/redis-cli.tcl
+x redis-stable/tests/integration/replication-3.tcl
+x redis-stable/tests/integration/replication-psync.tcl
+x redis-stable/tests/integration/rdb.tcl
+x redis-stable/tests/integration/convert-zipmap-hash-on-load.tcl
+x redis-stable/tests/integration/replication.tcl
+x redis-stable/tests/integration/aof.tcl
+x redis-stable/tests/integration/replication-4.tcl
+x redis-stable/tests/integration/replication-2.tcl
+x redis-stable/tests/cluster/
+x redis-stable/tests/cluster/cluster.tcl
+x redis-stable/tests/cluster/tmp/
+x redis-stable/tests/cluster/tmp/.gitignore
+x redis-stable/tests/cluster/tests/
+x redis-stable/tests/cluster/tests/10-manual-failover.tcl
+x redis-stable/tests/cluster/tests/03-failover-loop.tcl
+x redis-stable/tests/cluster/tests/08-update-msg.tcl
+x redis-stable/tests/cluster/tests/11-manual-takeover.tcl
+x redis-stable/tests/cluster/tests/06-slave-stop-cond.tcl
+x redis-stable/tests/cluster/tests/05-slave-selection.tcl
+x redis-stable/tests/cluster/tests/includes/
+x redis-stable/tests/cluster/tests/includes/init-tests.tcl
+x redis-stable/tests/cluster/tests/helpers/
+x redis-stable/tests/cluster/tests/helpers/onlydots.tcl
+x redis-stable/tests/cluster/tests/07-replica-migration.tcl
+x redis-stable/tests/cluster/tests/01-faildet.tcl
+x redis-stable/tests/cluster/tests/04-resharding.tcl
+x redis-stable/tests/cluster/tests/09-pubsub.tcl
+x redis-stable/tests/cluster/tests/02-failover.tcl
+x redis-stable/tests/cluster/tests/00-base.tcl
+x redis-stable/tests/cluster/tests/12-replica-migration-2.tcl
+x redis-stable/tests/cluster/run.tcl
+x redis-stable/tests/support/
+x redis-stable/tests/support/server.tcl
+x redis-stable/tests/support/util.tcl
+x redis-stable/tests/support/tmpfile.tcl
+x redis-stable/tests/support/cluster.tcl
+x redis-stable/tests/support/redis.tcl
+x redis-stable/tests/support/test.tcl
+x redis-stable/tests/assets/
+x redis-stable/tests/assets/default.conf
+x redis-stable/tests/assets/encodings.rdb
+x redis-stable/tests/assets/hash-zipmap.rdb
+x redis-stable/tests/helpers/
+x redis-stable/tests/helpers/gen_write_load.tcl
+x redis-stable/tests/helpers/bg_complex_data.tcl
+x redis-stable/tests/tmp/
+x redis-stable/tests/tmp/.gitignore
+x redis-stable/tests/instances.tcl
+x redis-stable/tests/test_helper.tcl
+x redis-stable/tests/sentinel/
+x redis-stable/tests/sentinel/tmp/
+x redis-stable/tests/sentinel/tmp/.gitignore
+x redis-stable/tests/sentinel/tests/
+x redis-stable/tests/sentinel/tests/05-manual.tcl
+x redis-stable/tests/sentinel/tests/07-down-conditions.tcl
+x redis-stable/tests/sentinel/tests/includes/
+x redis-stable/tests/sentinel/tests/includes/init-tests.tcl
+x redis-stable/tests/sentinel/tests/03-runtime-reconf.tcl
+x redis-stable/tests/sentinel/tests/00-base.tcl
+x redis-stable/tests/sentinel/tests/01-conf-update.tcl
+x redis-stable/tests/sentinel/tests/06-ckquorum.tcl
+x redis-stable/tests/sentinel/tests/02-slaves-reconf.tcl
+x redis-stable/tests/sentinel/tests/04-slave-selection.tcl
+x redis-stable/tests/sentinel/run.tcl
+x redis-stable/runtest
+x redis-stable/README.md
+x redis-stable/utils/
+x redis-stable/utils/install_server.sh
+x redis-stable/utils/redis_init_script
+x redis-stable/utils/hashtable/
+x redis-stable/utils/hashtable/rehashing.c
+x redis-stable/utils/hashtable/README
+x redis-stable/utils/redis-sha1.rb
+x redis-stable/utils/corrupt_rdb.c
+x redis-stable/utils/redis_init_script.tpl
+x redis-stable/utils/speed-regression.tcl
+x redis-stable/utils/releasetools/
+x redis-stable/utils/releasetools/01_create_tarball.sh
+x redis-stable/utils/releasetools/04_release_hash.sh
+x redis-stable/utils/releasetools/02_upload_tarball.sh
+x redis-stable/utils/releasetools/03_test_release.sh
+x redis-stable/utils/create-cluster/
+x redis-stable/utils/create-cluster/create-cluster
+x redis-stable/utils/create-cluster/README
+x redis-stable/utils/create-cluster/.gitignore
+x redis-stable/utils/redis-copy.rb
+x redis-stable/utils/lru/
+x redis-stable/utils/lru/test-lru.rb
+x redis-stable/utils/lru/README
+x redis-stable/utils/hyperloglog/
+x redis-stable/utils/hyperloglog/hll-gnuplot-graph.rb
+x redis-stable/utils/hyperloglog/hll-err.rb
+x redis-stable/utils/hyperloglog/.gitignore
+x redis-stable/utils/build-static-symbols.tcl
+x redis-stable/utils/whatisdoing.sh
+x redis-stable/utils/generate-command-help.rb
+x redis-stable/utils/cluster_fail_time.tcl
+x redis-stable/COPYING
+x redis-stable/.gitignore
+x redis-stable/BUGS
+x redis-stable/Makefile
+x redis-stable/MANIFESTO
+x redis-stable/CONTRIBUTING
+x redis-stable/redis.conf
+x redis-stable/runtest-cluster
+Rithiks-Air:~ rithikjain$ cd redis-stable
+Rithiks-Air:redis-stable rithikjain$ make
+cd src && /Applications/Xcode.app/Contents/Developer/usr/bin/make all
+rm -rf redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof *.o *.gcda *.gcno *.gcov redis.info lcov-html
+(cd ../deps && /Applications/Xcode.app/Contents/Developer/usr/bin/make distclean)
+(cd hiredis && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd linenoise && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd lua && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd geohash-int && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && /Applications/Xcode.app/Contents/Developer/usr/bin/make distclean) > /dev/null || true
+(rm -f .make-*)
+(rm -f .make-*)
+echo STD=-std=c99 -pedantic -DREDIS_STATIC='' >> .make-settings
+echo WARN=-Wall -W >> .make-settings
+echo OPT=-O2 >> .make-settings
+echo MALLOC=libc >> .make-settings
+echo CFLAGS= >> .make-settings
+echo LDFLAGS= >> .make-settings
+echo REDIS_CFLAGS= >> .make-settings
+echo REDIS_LDFLAGS= >> .make-settings
+echo PREV_FINAL_CFLAGS=-std=c99 -pedantic -DREDIS_STATIC='' -Wall -W -O2 -g -ggdb   -I../deps/geohash-int -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src >> .make-settings
+echo PREV_FINAL_LDFLAGS=  -g -ggdb >> .make-settings
+(cd ../deps && /Applications/Xcode.app/Contents/Developer/usr/bin/make hiredis linenoise lua geohash-int)
+(cd hiredis && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd linenoise && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd lua && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd geohash-int && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && /Applications/Xcode.app/Contents/Developer/usr/bin/make distclean) > /dev/null || true
+(rm -f .make-*)
+(echo "" > .make-ldflags)
+(echo "" > .make-cflags)
+MAKE hiredis
+cd hiredis && /Applications/Xcode.app/Contents/Developer/usr/bin/make static
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  hiredis.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  sds.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  async.c
+ar rcs libhiredis.a net.o hiredis.o sds.o async.o
+MAKE linenoise
+cd linenoise && /Applications/Xcode.app/Contents/Developer/usr/bin/make
+cc  -Wall -Os -g  -c linenoise.c
+MAKE lua
+cd lua/src && /Applications/Xcode.app/Contents/Developer/usr/bin/make all CFLAGS="-O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC='' " MYLDFLAGS="" AR="ar rcu"
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lapi.o lapi.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lcode.o lcode.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldebug.o ldebug.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldo.o ldo.c
+ldo.c:496:7: warning: unused variable 'c' [-Wunused-variable]
+  int c = luaZ_lookahead(p->z);
+      ^
+1 warning generated.
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldump.o ldump.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lfunc.o lfunc.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lgc.o lgc.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o llex.o llex.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lmem.o lmem.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lobject.o lobject.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lopcodes.o lopcodes.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lparser.o lparser.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstate.o lstate.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstring.o lstring.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltable.o ltable.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltm.o ltm.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lundump.o lundump.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lvm.o lvm.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lzio.o lzio.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o strbuf.o strbuf.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o fpconv.o fpconv.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lauxlib.o lauxlib.c
+lauxlib.c:577:61: warning: while loop has empty body [-Wempty-body]
+   while ((c = getc(lf.f)) != EOF && c != LUA_SIGNATURE[0]) ;
+                                                            ^
+lauxlib.c:577:61: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lbaselib.o lbaselib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldblib.o ldblib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o liolib.o liolib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lmathlib.o lmathlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o loslib.o loslib.c
+loslib.c:60:3: warning: 'tmpnam' is deprecated: This function is provided for compatibility reasons only. Due to security concerns inherent in the design of tmpnam(3), it is highly recommended that you
+      use mkstemp(3) instead. [-Wdeprecated-declarations]
+  lua_tmpnam(buff, err);
+  ^
+./luaconf.h:657:33: note: expanded from macro 'lua_tmpnam'
+#define lua_tmpnam(b,e)         { e = (tmpnam(b) == NULL); }
+                                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/stdio.h:277:7: note: 'tmpnam' has been explicitly marked deprecated here
+char    *tmpnam(char *);
+         ^
+1 warning generated.
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltablib.o ltablib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstrlib.o lstrlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o loadlib.o loadlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o linit.o linit.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_cjson.o lua_cjson.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_struct.o lua_struct.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_cmsgpack.o lua_cmsgpack.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_bit.o lua_bit.c
+ar rcu liblua.a lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o strbuf.o fpconv.o lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o loadlib.o linit.o lua_cjson.o lua_struct.o lua_cmsgpack.o lua_bit.o	# DLL needs all object files
+ranlib liblua.a
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua.o lua.c
+cc -o lua  lua.o liblua.a -lm 
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o luac.o luac.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o print.o print.c
+cc -o luac  luac.o print.o liblua.a -lm 
+MAKE geohash-int
+cd geohash-int && /Applications/Xcode.app/Contents/Developer/usr/bin/make
+cc  -Wall -O2 -g  -c geohash.c
+cc  -Wall -O2 -g  -c geohash_helper.c
+    CC adlist.o
+    CC quicklist.o
+    CC ae.o
+    CC anet.o
+    CC dict.o
+    CC server.o
+    CC sds.o
+    CC zmalloc.o
+    CC lzf_c.o
+    CC lzf_d.o
+    CC pqsort.o
+    CC zipmap.o
+    CC sha1.o
+    CC ziplist.o
+    CC release.o
+    CC networking.o
+    CC util.o
+    CC object.o
+    CC db.o
+    CC replication.o
+    CC rdb.o
+    CC t_string.o
+    CC t_list.o
+    CC t_set.o
+    CC t_zset.o
+    CC t_hash.o
+    CC config.o
+    CC aof.o
+    CC pubsub.o
+    CC multi.o
+    CC debug.o
+    CC sort.o
+    CC intset.o
+    CC syncio.o
+    CC cluster.o
+    CC crc16.o
+    CC endianconv.o
+    CC slowlog.o
+    CC scripting.o
+    CC bio.o
+    CC rio.o
+    CC rand.o
+    CC memtest.o
+    CC crc64.o
+    CC bitops.o
+    CC sentinel.o
+    CC notify.o
+    CC setproctitle.o
+    CC blocked.o
+    CC hyperloglog.o
+    CC latency.o
+    CC sparkline.o
+    CC redis-check-rdb.o
+    CC geo.o
+    LINK redis-server
+    INSTALL redis-sentinel
+    CC redis-cli.o
+    LINK redis-cli
+    CC redis-benchmark.o
+    LINK redis-benchmark
+    INSTALL redis-check-rdb
+    CC redis-check-aof.o
+    LINK redis-check-aof
+
+Hint: It's a good idea to run 'make test' ;)
+
+Rithiks-Air:redis-stable rithikjain$ make test
+cd src && /Applications/Xcode.app/Contents/Developer/usr/bin/make test
+Cleanup: may take some time... OK
+Starting test server at port 11111
+[ready]: 45566
+Testing unit/printver
+[ready]: 45567
+Testing unit/dump
+[ready]: 45560
+Testing unit/auth
+[ready]: 45568
+Testing unit/protocol
+[ready]: 45561
+Testing unit/keyspace
+[ready]: 45562
+Testing unit/scan
+[ready]: 45563
+Testing unit/type/string
+[ready]: 45564
+Testing unit/type/incr
+[ready]: 45565
+Testing unit/type/list
+[ready]: 45569
+Testing unit/type/list-2
+[ready]: 45570
+Testing unit/type/list-3
+[ready]: 45571
+Testing unit/type/set
+[ready]: 45572
+Testing unit/type/zset
+[ready]: 45573
+Testing unit/type/hash
+[ready]: 45574
+Testing unit/sort
+[ready]: 45575
+Testing unit/expire
+[ok]: AUTH fails if there is no password configured server side
+[ok]: SADD, SCARD, SISMEMBER, SMEMBERS basics - regular set
+[ok]: Handle an empty query
+[ok]: SET and GET an item
+Testing Redis version 3.2.5 (00000000)
+[ok]: EXPIRE - set timeouts multiple times
+[ok]: Negative multibulk length
+[ok]: EXPIRE - It should be still possible to read 'x'
+[ok]: SET and GET an empty item
+[ok]: DEL against a single item
+[ok]: Explicit regression for a list bug
+[ok]: Out of range multibulk length
+[ok]: Wrong multibulk payload header
+[ok]: Vararg DEL
+[ok]: Negative multibulk payload length
+[ok]: SADD, SCARD, SISMEMBER, SMEMBERS basics - intset
+[ok]: SADD against non set
+[ok]: Out of range multibulk payload length
+[ok]: DUMP / RESTORE are able to serialize / unserialize a simple key
+[ok]: HSET/HLEN - Small hash creation
+[ok]: Is the small hash encoded with a ziplist?
+[ok]: Non-number multibulk payload length
+[ok]: Regression for quicklist #3343 bug
+[ok]: KEYS with pattern
+[ok]: KEYS to get all keys
+[ok]: Multi bulk request not followed by bulk arguments
+[ok]: DBSIZE
+[ok]: RESTORE can set an arbitrary expire to the materialized key
+[ok]: Generic wrong number of args
+[ok]: SADD a non-integer against an intset
+[ok]: LPUSH, RPUSH, LLENGTH, LINDEX, LPOP - ziplist
+[ok]: Unbalanced number of quotes
+[ok]: SADD an integer larger than 64 bits
+[ok]: RESTORE can set an expire that overflows a 32 bit integer
+[ok]: RESTORE returns an error of the key already exists
+[ok]: DEL all keys
+[ok]: RESTORE can overwrite an existing key with REPLACE
+[ok]: RESTORE can detect a syntax error for unrecongized options
+[ok]: INCR against non existing key
+[ok]: INCR against key created by incr itself
+[ok]: Old Ziplist: SORT BY key
+[ok]: INCR against key originally set with SET
+[ok]: Old Ziplist: SORT BY key with limit
+[ok]: INCR over 32bit value
+[ok]: Old Ziplist: SORT BY hash field
+[ok]: INCRBY over 32bit value with over 32bit increment
+[ok]: INCR fails against key with spaces (left)
+[ok]: INCR fails against key with spaces (right)
+[ok]: INCR fails against key with spaces (both)
+[ok]: INCR fails against a key holding a list
+[ok]: Check encoding - ziplist
+[ok]: ZSET basic ZADD and score update - ziplist
+[ok]: DECRBY over 32bit value with over 32bit increment, negative res
+[ok]: ZSET element can't be set to NaN with ZADD - ziplist
+[ok]: INCR uses shared objects in the 0-9999 range
+[ok]: ZSET element can't be set to NaN with ZINCRBY
+[ok]: ZADD with options syntax error with incomplete pair
+[ok]: ZADD XX option without key - ziplist
+[ok]: ZADD XX existing key - ziplist
+[ok]: INCR can modify objects in-place
+[ok]: ZADD XX returns the number of elements actually added
+[ok]: ZADD XX updates existing elements score
+[ok]: INCRBYFLOAT against non existing key
+[ok]: ZADD XX and NX are not compatible
+[ok]: INCRBYFLOAT against key originally set with SET
+[ok]: ZADD NX with non exisitng key
+[ok]: INCRBYFLOAT over 32bit value
+[ok]: ZADD NX only add new elements without updating old ones
+[ok]: INCRBYFLOAT over 32bit value with over 32bit increment
+[ok]: ZADD INCR works like ZINCRBY
+[ok]: INCRBYFLOAT fails against key with spaces (left)
+[ok]: ZADD INCR works with a single score-elemenet pair
+[ok]: INCRBYFLOAT fails against key with spaces (right)
+[ok]: ZADD CH option changes return value to all changed elements
+[ok]: INCRBYFLOAT fails against key with spaces (both)
+[ok]: ZINCRBY calls leading to NaN result in error
+[ok]: DUMP of non existing key returns nil
+[ok]: INCRBYFLOAT fails against a key holding a list
+[ok]: ZADD - Variadic version base case
+[ok]: INCRBYFLOAT does not allow NaN or Infinity
+[ok]: ZADD - Return value is the number of actually added items
+[ok]: INCRBYFLOAT decrement
+[ok]: ZADD - Variadic version does not add nothing on single parsing err
+[ok]: ZADD - Variadic version will raise error on missing arg
+[ok]: ZINCRBY does not work variadic even if shares ZADD implementation
+[ok]: ZCARD basics - ziplist
+[ok]: ZREM removes key after last element is removed
+[ok]: ZREM variadic version
+[ok]: ZREM variadic version -- remove elements after key deletion
+[ok]: ZRANGE basics - ziplist
+[1/42 done]: unit/printver (1 seconds)
+Testing unit/other
+[ok]: ZREVRANGE basics - ziplist
+[ok]: ZRANK/ZREVRANK basics - ziplist
+[ok]: ZRANK - after deletion - ziplist
+[ok]: ZINCRBY - can create a new sorted set - ziplist
+[ok]: ZINCRBY - increment and decrement - ziplist
+[ok]: ZINCRBY return value
+[ok]: ZRANGEBYSCORE/ZREVRANGEBYSCORE/ZCOUNT basics
+[ok]: ZRANGEBYSCORE with WITHSCORES
+[ok]: ZRANGEBYSCORE with LIMIT
+[ok]: ZRANGEBYSCORE with LIMIT and WITHSCORES
+[ok]: ZRANGEBYSCORE with non-value min or max
+[ok]: ZRANGEBYLEX/ZREVRANGEBYLEX/ZCOUNT basics
+[ok]: ZRANGEBYSLEX with LIMIT
+[ok]: ZRANGEBYLEX with invalid lex range specifiers
+[ok]: LPUSH, RPUSH, LLENGTH, LINDEX, LPOP - regular list
+[ok]: R/LPOP against empty list
+[ok]: Variadic RPUSH/LPUSH
+[ok]: ZREMRANGEBYSCORE basics
+[ok]: ZREMRANGEBYSCORE with non-value min or max
+[ok]: DEL a list
+[ok]: SCAN basic
+[ok]: BLPOP, BRPOP: single existing list - linkedlist
+[ok]: BLPOP, BRPOP: multiple existing lists - linkedlist
+[ok]: BLPOP, BRPOP: second list has an entry - linkedlist
+[ok]: BRPOPLPUSH - linkedlist
+[ok]: BLPOP, BRPOP: single existing list - ziplist
+[ok]: BLPOP, BRPOP: multiple existing lists - ziplist
+[ok]: BLPOP, BRPOP: second list has an entry - ziplist
+[ok]: BRPOPLPUSH - ziplist
+[ok]: BLPOP, LPUSH + DEL should not awake blocked client
+[ok]: BLPOP, LPUSH + DEL + SET should not awake blocked client
+[ok]: BLPOP with same key multiple times should work (issue #801)
+[ok]: MULTI/EXEC is isolated from the point of view of BLPOP
+[ok]: BLPOP with variadic LPUSH
+[ok]: SAVE - make sure there are all the types as values
+[ok]: MIGRATE is caching connections
+[ok]: ZREMRANGEBYRANK basics
+[ok]: ZUNIONSTORE against non-existing key doesn't set destination - ziplist
+[ok]: ZUNIONSTORE with empty set - ziplist
+[ok]: ZUNIONSTORE basics - ziplist
+[ok]: ZUNIONSTORE with weights - ziplist
+[ok]: ZUNIONSTORE with a regular set and weights - ziplist
+[ok]: ZUNIONSTORE with AGGREGATE MIN - ziplist
+[ok]: ZUNIONSTORE with AGGREGATE MAX - ziplist
+[ok]: ZINTERSTORE basics - ziplist
+[ok]: SADD overflows the maximum allowed integers in an intset
+[ok]: Variadic SADD
+[ok]: ZINTERSTORE with weights - ziplist
+[ok]: ZINTERSTORE with a regular set and weights - ziplist
+[ok]: ZINTERSTORE with AGGREGATE MIN - ziplist
+[ok]: ZINTERSTORE with AGGREGATE MAX - ziplist
+[ok]: ZUNIONSTORE with +inf/-inf scores - ziplist
+[ok]: ZUNIONSTORE with NaN weights ziplist
+[ok]: ZINTERSTORE with +inf/-inf scores - ziplist
+[ok]: ZINTERSTORE with NaN weights ziplist
+[ok]: Check encoding - skiplist
+[ok]: ZSET basic ZADD and score update - skiplist
+[ok]: ZSET element can't be set to NaN with ZADD - skiplist
+[ok]: ZSET element can't be set to NaN with ZINCRBY
+[ok]: ZADD with options syntax error with incomplete pair
+[ok]: ZADD XX option without key - skiplist
+[ok]: ZADD XX existing key - skiplist
+[ok]: ZADD XX returns the number of elements actually added
+[ok]: ZADD XX updates existing elements score
+[ok]: ZADD XX and NX are not compatible
+[ok]: ZADD NX with non exisitng key
+[ok]: ZADD NX only add new elements without updating old ones
+[ok]: ZADD INCR works like ZINCRBY
+[ok]: ZADD INCR works with a single score-elemenet pair
+[ok]: ZADD CH option changes return value to all changed elements
+[ok]: ZINCRBY calls leading to NaN result in error
+[ok]: ZADD - Variadic version base case
+[ok]: ZADD - Return value is the number of actually added items
+[ok]: ZADD - Variadic version does not add nothing on single parsing err
+[ok]: ZADD - Variadic version will raise error on missing arg
+[ok]: ZINCRBY does not work variadic even if shares ZADD implementation
+[ok]: ZCARD basics - skiplist
+[ok]: ZREM removes key after last element is removed
+[ok]: ZREM variadic version
+[ok]: ZREM variadic version -- remove elements after key deletion
+[ok]: ZRANGE basics - skiplist
+[ok]: ZREVRANGE basics - skiplist
+[ok]: ZRANK/ZREVRANK basics - skiplist
+[ok]: ZRANK - after deletion - skiplist
+[ok]: SCAN COUNT
+[ok]: SCAN MATCH
+[ok]: SSCAN with encoding intset
+[ok]: SSCAN with encoding hashtable
+[ok]: HSCAN with encoding ziplist
+[ok]: HSCAN with encoding hashtable
+[ok]: ZSCAN with encoding ziplist
+[ok]: ZINCRBY - can create a new sorted set - skiplist
+[ok]: ZINCRBY - increment and decrement - skiplist
+[ok]: ZINCRBY return value
+[ok]: ZRANGEBYSCORE/ZREVRANGEBYSCORE/ZCOUNT basics
+[ok]: ZRANGEBYSCORE with WITHSCORES
+[ok]: ZRANGEBYSCORE with LIMIT
+[ok]: ZRANGEBYSCORE with LIMIT and WITHSCORES
+[ok]: ZRANGEBYSCORE with non-value min or max
+[ok]: ZRANGEBYLEX/ZREVRANGEBYLEX/ZCOUNT basics
+[ok]: ZRANGEBYSLEX with LIMIT
+[ok]: ZRANGEBYLEX with invalid lex range specifiers
+[ok]: ZREMRANGEBYSCORE basics
+[ok]: ZREMRANGEBYSCORE with non-value min or max
+[ok]: ZREMRANGEBYRANK basics
+[ok]: ZUNIONSTORE against non-existing key doesn't set destination - skiplist
+[ok]: ZUNIONSTORE with empty set - skiplist
+[ok]: ZUNIONSTORE basics - skiplist
+[ok]: ZUNIONSTORE with weights - skiplist
+[ok]: ZUNIONSTORE with a regular set and weights - skiplist
+[ok]: ZUNIONSTORE with AGGREGATE MIN - skiplist
+[ok]: ZUNIONSTORE with AGGREGATE MAX - skiplist
+[ok]: ZINTERSTORE basics - skiplist
+[ok]: ZINTERSTORE with weights - skiplist
+[ok]: ZINTERSTORE with a regular set and weights - skiplist
+[ok]: ZINTERSTORE with AGGREGATE MIN - skiplist
+[ok]: ZINTERSTORE with AGGREGATE MAX - skiplist
+[ok]: ZUNIONSTORE with +inf/-inf scores - skiplist
+[ok]: ZUNIONSTORE with NaN weights skiplist
+[ok]: ZINTERSTORE with +inf/-inf scores - skiplist
+[ok]: ZINTERSTORE with NaN weights skiplist
+[ok]: ZINTERSTORE regression with two sets, intset+hashtable
+[ok]: ZUNIONSTORE regression, should not create NaN in scores
+[ok]: ZINTERSTORE #516 regression, mixed sets and ziplist zsets
+[ok]: Very big payload in GET/SET
+[ok]: HSET/HLEN - Big hash creation
+[ok]: Is the big hash encoded with an hash table?
+[ok]: HGET against the small hash
+[ok]: Protocol desync regression test #1
+[ok]: ZSCAN with encoding skiplist
+[ok]: SCAN guarantees check under write load
+[ok]: SSCAN with integer encoded object (issue #1345)
+[ok]: SSCAN with PATTERN
+[ok]: HSCAN with PATTERN
+[ok]: ZSCAN with PATTERN
+[ok]: DEL against expired key
+[ok]: EXISTS
+[ok]: Zero length value in key. SET/GET/EXISTS
+[ok]: Commands pipelining
+[ok]: Non existing command
+[ok]: RENAME basic usage
+[ok]: RENAME source key should no longer exist
+[ok]: RENAME against already existing key
+[ok]: RENAMENX basic usage
+[ok]: RENAMENX against already existing key
+[ok]: RENAMENX against already existing key (2)
+[ok]: RENAME against non existing source key
+[ok]: RENAME where source and dest key are the same (existing)
+[ok]: RENAMENX where source and dest key are the same (existing)
+[ok]: RENAME where source and dest key are the same (non existing)
+[ok]: RENAME with volatile key, should move the TTL as well
+[ok]: RENAME with volatile key, should not inherit TTL of target key
+[ok]: DEL all keys again (DB 0)
+[ok]: DEL all keys again (DB 1)
+[ok]: MOVE basic usage
+[ok]: MOVE against key existing in the target DB
+[ok]: MOVE against non-integer DB (#1428)
+[ok]: MOVE can move key expire metadata as well
+[ok]: MOVE does not create an expire if it does not exist
+[ok]: SET/GET keys in different DBs
+[ok]: RANDOMKEY
+[ok]: RANDOMKEY against empty DB
+[ok]: RANDOMKEY regression 1
+[ok]: KEYS * two times with long key, Github issue #1208
+[ok]: ZUNIONSTORE result is sorted
+[ok]: BRPOPLPUSH with zero timeout should block indefinitely
+[ok]: Set encoding after DEBUG RELOAD
+[ok]: SREM basics - regular set
+[ok]: SREM basics - intset
+[ok]: SREM with multiple arguments
+[ok]: SREM variadic version with more args needed to destroy the key
+[ok]: HGET against the big hash
+[ok]: HGET against non existing key
+[ok]: ZSCAN scores: regression test for issue #2175
+[ok]: HSET in update and insert mode
+[ok]: HSETNX target key missing - small hash
+[ok]: HSETNX target key exists - small hash
+[ok]: HSETNX target key missing - big hash
+[ok]: HSETNX target key exists - big hash
+[ok]: HMSET wrong number of args
+[ok]: HMSET - small hash
+[ok]: Generated sets must be encoded as hashtable
+[ok]: SINTER with two sets - hashtable
+[ok]: SINTERSTORE with two sets - hashtable
+[ok]: ZSCORE - ziplist
+[ok]: HMSET - big hash
+[ok]: HMGET against non existing key and fields
+[ok]: HMGET against wrong type
+[ok]: HMGET - small hash
+[ok]: Protocol desync regression test #2
+[ok]: SINTERSTORE with two sets, after a DEBUG RELOAD - hashtable
+[ok]: SUNION with two sets - hashtable
+[ok]: SUNIONSTORE with two sets - hashtable
+[ok]: SINTER against three sets - hashtable
+[ok]: SINTERSTORE with three sets - hashtable
+[ok]: SUNION with non existing keys - hashtable
+[ok]: SDIFF with two sets - hashtable
+[ok]: SDIFF with three sets - hashtable
+[ok]: SDIFFSTORE with three sets - hashtable
+[ok]: ZSCORE after a DEBUG RELOAD - ziplist
+[ok]: Old Linked list: SORT BY key
+[ok]: Old Linked list: SORT BY key with limit
+[ok]: ZSET sorting stresser - ziplist
+[ok]: HMGET - big hash
+[ok]: HKEYS - small hash
+[ok]: Old Linked list: SORT BY hash field
+[ok]: HKEYS - big hash
+[ok]: HVALS - small hash
+[ok]: HVALS - big hash
+[ok]: HGETALL - small hash
+[ok]: Generated sets must be encoded as intset
+[ok]: SINTER with two sets - intset
+[ok]: SINTERSTORE with two sets - intset
+[ok]: SINTERSTORE with two sets, after a DEBUG RELOAD - intset
+[ok]: SUNION with two sets - intset
+[ok]: SUNIONSTORE with two sets - intset
+[ok]: SINTER against three sets - intset
+[ok]: SINTERSTORE with three sets - intset
+[ok]: SUNION with non existing keys - intset
+[ok]: SDIFF with two sets - intset
+[ok]: SDIFF with three sets - intset
+[ok]: SDIFFSTORE with three sets - intset
+[ok]: SDIFF with first set empty
+[ok]: SDIFF with same set two times
+[ok]: EXPIRE - After 2.1 seconds the key should no longer be here
+[ok]: EXPIRE - write on expire should work
+[ok]: EXPIREAT - Check for EXPIRE alike behavior
+[ok]: SETEX - Set + Expire combo operation. Check for TTL
+[ok]: SETEX - Check value
+[ok]: SETEX - Overwrite old key
+[ok]: Protocol desync regression test #3
+[ok]: BRPOPLPUSH with a client BLPOPing the target list
+[ok]: BRPOPLPUSH with wrong source type
+[ok]: HGETALL - big hash
+[ok]: HDEL and return value
+[ok]: HDEL - more than a single value
+[ok]: HDEL - hash becomes empty before deleting all specified fields
+[ok]: HEXISTS
+[ok]: Is a ziplist encoded Hash promoted on big payload?
+[ok]: HINCRBY against non existing database key
+[ok]: HINCRBY against non existing hash key
+[ok]: HINCRBY against hash key created by hincrby itself
+[ok]: HINCRBY against hash key originally set with HSET
+[ok]: HINCRBY over 32bit value
+[ok]: HINCRBY over 32bit value with over 32bit increment
+[ok]: HINCRBY fails against hash value with spaces (left)
+[ok]: HINCRBY fails against hash value with spaces (right)
+[ok]: HINCRBY can detect overflows
+[ok]: HINCRBYFLOAT against non existing database key
+[ok]: HINCRBYFLOAT against non existing hash key
+[ok]: HINCRBYFLOAT against hash key created by hincrby itself
+[ok]: HINCRBYFLOAT against hash key originally set with HSET
+[ok]: HINCRBYFLOAT over 32bit value
+[ok]: HINCRBYFLOAT over 32bit value with over 32bit increment
+[ok]: HINCRBYFLOAT fails against hash value with spaces (left)
+[ok]: HINCRBYFLOAT fails against hash value with spaces (right)
+[ok]: HSTRLEN against the small hash
+[ok]: HSTRLEN against the big hash
+[ok]: HSTRLEN against non existing field
+[ok]: HSTRLEN corner cases
+[ok]: Hash ziplist regression test for large keys
+[ok]: Hash fuzzing #1 - 10 fields
+[ok]: Check for memory leaks (pid 45597)
+[ok]: Hash fuzzing #2 - 10 fields
+[ok]: Check for memory leaks (pid 45606)
+[ok]: SETEX - Wait for the key to expire
+[ok]: SETEX - Wrong time parameter
+[ok]: PERSIST can undo an EXPIRE
+[ok]: PERSIST returns 0 against non existing or non volatile keys
+[ok]: BRPOPLPUSH with wrong destination type
+[ok]: BRPOPLPUSH maintains order of elements after failure
+[ok]: BRPOPLPUSH with multiple blocked clients
+[ok]: Linked BRPOPLPUSH
+[ok]: Circular BRPOPLPUSH
+[ok]: Self-referential BRPOPLPUSH
+[ok]: BRPOPLPUSH inside a transaction
+[2/42 done]: unit/type/incr (4 seconds)
+Testing unit/multi
+[ok]: PUSH resulting from BRPOPLPUSH affect WATCH
+[ok]: BRPOPLPUSH does not affect WATCH while still blocked
+[ok]: AUTH fails when a wrong password is given
+[ok]: Arbitrary command gives an error when AUTH is required
+[ok]: AUTH succeeds when the right password is given
+[ok]: Once AUTH succeeded we can actually send commands to the server
+[ok]: MUTLI / EXEC basics
+[ok]: DISCARD
+[ok]: Nested MULTI are not allowed
+[ok]: MULTI where commands alter argc/argv
+[ok]: WATCH inside MULTI is not allowed
+[ok]: EXEC fails if there are errors while queueing commands #1
+[ok]: EXEC fails if there are errors while queueing commands #2
+[ok]: If EXEC aborts, the client MULTI state is cleared
+[ok]: EXEC works on WATCHed key not modified
+[ok]: EXEC fail on WATCHed key modified (1 key of 1 watched)
+[ok]: EXEC fail on WATCHed key modified (1 key of 5 watched)
+[ok]: EXEC fail on WATCHed key modified by SORT with STORE even if the result is empty
+[ok]: After successful EXEC key is no longer watched
+[ok]: After failed EXEC key is no longer watched
+[ok]: It is possible to UNWATCH
+[ok]: UNWATCH when there is nothing watched works as expected
+[ok]: FLUSHALL is able to touch the watched keys
+[ok]: FLUSHALL does not touch non affected keys
+[ok]: FLUSHDB is able to touch the watched keys
+[ok]: FLUSHDB does not touch non affected keys
+[ok]: WATCH is able to remember the DB a key belongs to
+[ok]: WATCH will consider touched keys target of EXPIRE
+[ok]: Check for memory leaks (pid 45599)
+[3/42 done]: unit/keyspace (4 seconds)
+Testing unit/quit
+[ok]: FUZZ stresser with data model binary
+[ok]: QUIT returns OK
+[ok]: Pipelined commands after QUIT must not be executed
+[ok]: Pipelined commands after QUIT that exceed read buffer size
+[ok]: Check for memory leaks (pid 45603)
+[4/42 done]: unit/scan (5 seconds)
+Testing unit/aofrw
+[ok]: Check for memory leaks (pid 45582)
+[ok]: WATCH will not consider touched expired keys
+[ok]: DISCARD should clear the WATCH dirty flag on the client
+[ok]: DISCARD should UNWATCH all the keys
+[ok]: MULTI / EXEC is propagated correctly (single write command)
+[ok]: MULTI / EXEC is propagated correctly (empty transaction)
+[ok]: Regression for a crash with blocking ops and pipelining
+[ok]: MULTI / EXEC is propagated correctly (read-only commands)
+[ok]: MULTI / EXEC is propagated correctly (write command, no effect)
+[ok]: EXPIRE pricision is now the millisecond
+[ok]: BRPOPLPUSH timeout
+[ok]: BLPOP when new key is moved into place
+[ok]: BLPOP when result key is created by SORT..STORE
+[ok]: BLPOP: with single empty list argument
+[ok]: BLPOP: with negative timeout
+[ok]: BLPOP: with non-integer timeout
+[ok]: Check for memory leaks (pid 45762)
+[ok]: Check for memory leaks (pid 45729)
+[5/42 done]: unit/auth (6 seconds)
+Testing integration/replication
+[6/42 done]: unit/quit (2 seconds)
+Testing integration/replication-2
+[ok]: BLPOP: with zero timeout should block indefinitely
+[ok]: BLPOP: second argument is not a list
+[ok]: PEXPIRE/PSETEX/PEXPIREAT can set sub-second expires
+[ok]: TTL returns tiem to live in seconds
+[ok]: PTTL returns time to live in milliseconds
+[ok]: TTL / PTTL return -1 if key has no expire
+[ok]: TTL / PTTL return -2 if key does not exit
+[ok]: Check for memory leaks (pid 45740)
+[ok]: Check for memory leaks (pid 45795)
+[ok]: Slave enters handshake
+[ok]: First server should have role slave after SLAVEOF
+[ok]: If min-slaves-to-write is honored, write is accepted
+[ok]: No write if min-slaves-to-write is < attached slaves
+[ok]: If min-slaves-to-write is honored, write is accepted (again)
+[7/42 done]: unit/multi (4 seconds)
+Testing integration/replication-3
+[8/42 done]: unit/protocol (8 seconds)
+Testing integration/replication-4
+[ok]: Stress tester for #3343-alike bugs
+[ok]: FUZZ stresser with data model alpha
+[ok]: BLPOP: timeout
+[ok]: BLPOP: arguments are empty
+[ok]: BRPOP: with single empty list argument
+[ok]: BRPOP: with negative timeout
+[ok]: BRPOP: with non-integer timeout
+[ok]: Redis should actively expire keys incrementally
+[ok]: First server should have role slave after SLAVEOF
+[ok]: First server should have role slave after SLAVEOF
+[ok]: BRPOP: with zero timeout should block indefinitely
+[ok]: BRPOP: second argument is not a list
+[ok]: Redis should lazy expire keys
+[ok]: Very big payload random access
+[ok]: EXPIRE should not resurrect keys (issue #1026)
+[ok]: 5 keys in, 5 keys out
+[ok]: EXPIRE with empty string as TTL should report an error
+[ok]: ziplist implementation: value encoding and backlink
+[ok]: BRPOP: timeout
+[ok]: BRPOP: arguments are empty
+[ok]: BLPOP inside a transaction
+[ok]: LPUSHX, RPUSHX - generic
+[ok]: LPUSHX, RPUSHX - linkedlist
+[ok]: LINSERT - linkedlist
+[ok]: LPUSHX, RPUSHX - ziplist
+[ok]: LINSERT - ziplist
+[ok]: LINSERT raise error on bad syntax
+[ok]: LINDEX consistency test - quicklist
+[ok]: LINDEX random access - quicklist
+[ok]: Check if list is still ok after a DEBUG RELOAD - quicklist
+[ok]: FUZZ stresser with data model compr
+[ok]: Check for memory leaks (pid 45605)
+[9/42 done]: unit/expire (13 seconds)
+Testing integration/replication-psync
+[ok]: LINDEX consistency test - quicklist
+[ok]: Hash fuzzing #1 - 512 fields
+[ok]: BGSAVE
+[ok]: SELECT an out of range DB
+[ok]: No write if min-slaves-max-lag is > of the slave lag
+[ok]: min-slaves-to-write is ignored by slaves
+[ok]: LINDEX random access - quicklist
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Test replication partial resync: no reconnection, just sync (diskless: no, reconnect: 0)
+[ok]: Test replication with parallel clients writing in differnet DBs
+[ok]: Check if list is still ok after a DEBUG RELOAD - quicklist
+[ok]: LLEN against non-list value error
+[ok]: LLEN against non existing key
+[ok]: LINDEX against non-list value error
+[ok]: LINDEX against non existing key
+[ok]: LPUSH against non-list value error
+[ok]: RPUSH against non-list value error
+[ok]: RPOPLPUSH base case - linkedlist
+[ok]: RPOPLPUSH with the same list as src and dst - linkedlist
+[ok]: RPOPLPUSH with linkedlist source and existing target linkedlist
+[ok]: RPOPLPUSH with linkedlist source and existing target ziplist
+[ok]: RPOPLPUSH base case - ziplist
+[ok]: RPOPLPUSH with the same list as src and dst - ziplist
+[ok]: RPOPLPUSH with ziplist source and existing target linkedlist
+[ok]: RPOPLPUSH with ziplist source and existing target ziplist
+[ok]: RPOPLPUSH against non existing key
+[ok]: RPOPLPUSH against non list src key
+[ok]: RPOPLPUSH against non list dst key
+[ok]: RPOPLPUSH against non existing src key
+[ok]: Basic LPOP/RPOP - linkedlist
+[ok]: Basic LPOP/RPOP - ziplist
+[ok]: LPOP/RPOP against non list value
+[ok]: Mass RPOP/LPOP - quicklist
+[ok]: Mass RPOP/LPOP - quicklist
+[ok]: LRANGE basics - linkedlist
+[ok]: LRANGE inverted indexes - linkedlist
+[ok]: LRANGE out of range indexes including the full list - linkedlist
+[ok]: LRANGE out of range negative end index - linkedlist
+[ok]: LRANGE basics - ziplist
+[ok]: LRANGE inverted indexes - ziplist
+[ok]: LRANGE out of range indexes including the full list - ziplist
+[ok]: MIGRATE cached connections are released after some time
+[ok]: LRANGE out of range negative end index - ziplist
+[ok]: LRANGE against non existing key
+[ok]: LTRIM basics - linkedlist
+[ok]: LTRIM out of range negative end index - linkedlist
+[ok]: MIGRATE is able to migrate a key between two instances
+[ok]: LTRIM basics - ziplist
+[ok]: LTRIM out of range negative end index - ziplist
+[ok]: LSET - linkedlist
+[ok]: LSET out of range index - linkedlist
+[ok]: LSET - ziplist
+[ok]: LSET out of range index - ziplist
+[ok]: LSET against non existing key
+[ok]: LSET against non list value
+[ok]: MIGRATE is able to copy a key between two instances
+[ok]: LREM remove all the occurrences - linkedlist
+[ok]: LREM remove the first occurrence - linkedlist
+[ok]: LREM remove non existing element - linkedlist
+[ok]: LREM starting from tail with negative count - linkedlist
+[ok]: LREM starting from tail with negative count (2) - linkedlist
+[ok]: LREM deleting objects that may be int encoded - linkedlist
+[ok]: LREM remove all the occurrences - ziplist
+[ok]: LREM remove the first occurrence - ziplist
+[ok]: LREM remove non existing element - ziplist
+[ok]: LREM starting from tail with negative count - ziplist
+[ok]: LREM starting from tail with negative count (2) - ziplist
+[ok]: LREM deleting objects that may be int encoded - ziplist
+[ok]: Check for memory leaks (pid 45936)
+[ok]: MIGRATE will not overwrite existing keys, unless REPLACE is used
+[ok]: MIGRATE propagates TTL correctly
+[ok]: Check for memory leaks (pid 45894)
+[ok]: Regression for bug 593 - chaining BRPOPLPUSH with other blocking cmds
+[ok]: Slave is able to detect timeout during handshake
+[ok]: ZRANGEBYSCORE fuzzy test, 100 ranges in 128 element sorted set - ziplist
+[ok]: SET 10000 numeric keys and access all them in reverse order
+[ok]: DBSIZE should be 10000 now
+[ok]: SETNX target key missing
+[ok]: SETNX target key exists
+[ok]: SETNX against not-expired volatile key
+[ok]: Check for memory leaks (pid 45930)
+[ok]: Hash fuzzing #2 - 512 fields
+[ok]: Check for memory leaks (pid 45602)
+[10/42 done]: unit/type/list (20 seconds)
+Testing integration/aof
+[ok]: Check for memory leaks (pid 45844)
+[ok]: Check for memory leaks (pid 45882)
+[ok]: Unfinished MULTI: Server should start if load-truncated is yes
+[ok]: ZRANGEBYLEX fuzzy test, 100 ranges in 128 element sorted set - ziplist
+[ok]: Check consistency of different data types after a reload
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: First server should have role slave after SLAVEOF
+[ok]: With min-slaves-to-write (1,3): master should be writable
+[ok]: With min-slaves-to-write (2,3): master should not be writable
+[ok]: Same dataset digest if saving/reloading as AOF?
+[ok]: Old Big Linked list: SORT BY key
+[ok]: Old Big Linked list: SORT BY key with limit
+[ok]: ZREMRANGEBYLEX fuzzy test, 100 ranges in 128 element sorted set - ziplist
+[ok]: EXPIRES after a reload (snapshot + append only file rewrite)
+[ok]: ZSETs skiplist implementation backlink consistency test - ziplist
+[ok]: AOF rewrite during write load
+[ok]: Check for memory leaks (pid 45835)
+[ok]: Check for memory leaks (pid 46069)
+[ok]: Short read: Server should start if load-truncated is yes
+[ok]: Truncated AOF loaded: we expect foo to be equal to 5
+[ok]: Append a new command after loading an incomplete AOF
+[ok]: Set instance A as slave of B
+[ok]: BRPOPLPUSH replication, when blocking against empty list
+[ok]: BRPOPLPUSH replication, list exists
+[ok]: With min-slaves-to-write: master not writable with lagged slave
+[ok]: BLPOP followed by role change, issue #2473
+[ok]: EXPIRES after AOF reload (without rewrite)
+[ok]: Check for memory leaks (pid 46146)
+[ok]: SETNX against expired volatile key
+[ok]: MGET
+[ok]: MGET against non existing key
+[ok]: MGET against non-string key
+[ok]: GETSET (set new value)
+[ok]: GETSET (replace old value)
+[ok]: MSET base case
+[ok]: MSET wrong number of args
+[ok]: MSETNX with already existent key
+[ok]: MSETNX with not existing keys
+[ok]: STRLEN against non-existing key
+[ok]: STRLEN against integer-encoded value
+[ok]: STRLEN against plain string
+[ok]: SETBIT against non-existing key
+[ok]: SETBIT against string-encoded key
+[ok]: SETBIT against integer-encoded key
+[ok]: SETBIT against key with wrong type
+[ok]: SETBIT with out of range bit offset
+[ok]: SETBIT with non-bit argument
+[ok]: Short read + command: Server should start
+[ok]: Truncated AOF loaded: we expect foo to be equal to 6 now
+[ok]: Check for memory leaks (pid 45780)
+[ok]: Old Big Linked list: SORT BY hash field
+[ok]: Intset: SORT BY key
+[ok]: Intset: SORT BY key with limit
+[ok]: Intset: SORT BY hash field
+[ok]: SDIFF fuzzing
+[ok]: SINTER against non-set should throw error
+[ok]: SUNION against non-set should throw error
+[ok]: SINTER should handle non existing key as empty
+[ok]: SINTER with same integer elements but different encoding
+[ok]: SINTERSTORE against non existing keys should delete dstkey
+[ok]: SUNIONSTORE against non existing keys should delete dstkey
+[ok]: SPOP basics - hashtable
+[ok]: SPOP with <count>=1 - hashtable
+[ok]: SRANDMEMBER - hashtable
+[ok]: SPOP basics - intset
+[ok]: SPOP with <count>=1 - intset
+[ok]: SRANDMEMBER - intset
+[ok]: SPOP with <count>
+[ok]: SPOP with <count>
+[ok]: SPOP using integers, testing Knuth's and Floyd's algorithm
+[ok]: SPOP using integers with Knuth's algorithm
+[ok]: SPOP new implementation: code path #1
+[ok]: SPOP new implementation: code path #2
+[ok]: SPOP new implementation: code path #3
+[ok]: SRANDMEMBER with <count> against non existing key
+[ok]: ZSETs ZRANK augmented skip list stress testing - ziplist
+[ok]: SRANDMEMBER with <count> - hashtable
+[ok]: SRANDMEMBER with <count> - intset
+[ok]: SMOVE basics - from regular set to intset
+[ok]: SMOVE basics - from intset to regular set
+[ok]: SMOVE non existing key
+[ok]: SMOVE non existing src set
+[ok]: SMOVE from regular set to non existing destination set
+[ok]: SMOVE from intset to non existing destination set
+[ok]: SMOVE wrong src key type
+[ok]: SMOVE wrong dst key type
+[ok]: SMOVE with identical source and destination
+[ok]: Test replication partial resync: ok psync (diskless: no, reconnect: 1)
+[ok]: ZSCORE - skiplist
+[ok]: Turning off AOF kills the background writing child if any
+[ok]: ZSCORE after a DEBUG RELOAD - skiplist
+[ok]: ZSET sorting stresser - skiplist
+[ok]: Check for memory leaks (pid 46152)
+[ok]: Check for memory leaks (pid 46110)
+[ok]: Stress test the hash ziplist -> hashtable encoding conversion
+[ok]: Hash table: SORT BY key
+[ok]: Hash table: SORT BY key with limit
+[ok]: Hash table: SORT BY hash field
+[ok]: Check for memory leaks (pid 46186)
+[ok]: SETBIT fuzzing
+[ok]: GETBIT against non-existing key
+[ok]: GETBIT against string-encoded key
+[ok]: GETBIT against integer-encoded key
+[ok]: SETRANGE against non-existing key
+[ok]: SETRANGE against string-encoded key
+[ok]: SETRANGE against integer-encoded key
+[ok]: SETRANGE against key with wrong type
+[ok]: SETRANGE with out of range offset
+[ok]: GETRANGE against non-existing key
+[ok]: GETRANGE against string value
+[ok]: GETRANGE against integer-encoded value
+[ok]: Bad format: Server should have logged an error
+[ok]: AOF rewrite of list with quicklist encoding, string data
+[ok]: Unfinished MULTI: Server should have logged an error
+[ok]: Short read: Server should have logged an error
+[ok]: Short read: Utility should confirm the AOF is not valid
+[ok]: Short read: Utility should be able to fix the AOF
+[ok]: Fixed AOF: Server should have been started
+[ok]: Fixed AOF: Keyspace should contain values that were parseable
+[ok]: Check for memory leaks (pid 46060)
+[ok]: AOF rewrite of list with quicklist encoding, int data
+[ok]: Check for memory leaks (pid 46136)
+[ok]: AOF rewrite of set with intset encoding, string data
+[ok]: Check for memory leaks (pid 45604)
+[ok]: Second server should have role master at first
+[ok]: SLAVEOF should start with link status "down"
+[ok]: The role should immediately be changed to "slave"
+[11/42 done]: unit/type/hash (32 seconds)
+Testing integration/rdb
+[ok]: Check for memory leaks (pid 46103)
+[ok]: RDB encoding loading test
+[ok]: First server should have role slave after SLAVEOF
+[ok]: Check for memory leaks (pid 46293)
+[ok]: Sync should have transferred keys from master
+[ok]: The link status should be up
+[ok]: SET on the master should immediately propagate
+[ok]: FLUSHALL should replicate
+[ok]: ROLE in master reports master with a slave
+[ok]: ROLE in slave reports slave in connected state
+[ok]: AOF+SPOP: Server should have been started
+[ok]: AOF+SPOP: Set should have 1 member
+[ok]: AOF rewrite of set with hashtable encoding, string data
+[ok]: Check for memory leaks (pid 46054)
+[ok]: AOF rewrite of set with intset encoding, int data
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Check for memory leaks (pid 46350)
+[ok]: Server started empty with non-existing RDB file
+[ok]: AOF rewrite of set with hashtable encoding, int data
+[ok]: Check for memory leaks (pid 46388)
+[ok]: Check for memory leaks (pid 46336)
+[ok]: AOF+SPOP: Server should have been started
+[ok]: AOF+SPOP: Set should have 1 member
+[ok]: GETRANGE fuzzing
+[ok]: Extended SET can detect syntax errors
+[ok]: Extended SET NX option
+[ok]: Extended SET XX option
+[ok]: Extended SET EX option
+[ok]: Extended SET PX option
+[ok]: Extended SET using multiple options at once
+[ok]: GETRANGE with huge ranges, Github issue #1844
+[ok]: AOF rewrite of hash with ziplist encoding, string data
+[ok]: MASTER and SLAVE consistency with expire
+[ok]: AOF rewrite of hash with hashtable encoding, string data
+[ok]: Check for memory leaks (pid 46443)
+[ok]: Server started empty with empty RDB file
+[ok]: intsets implementation stress testing
+[ok]: AOF rewrite of hash with ziplist encoding, int data
+[ok]: Check for memory leaks (pid 46461)
+[ok]: Check for memory leaks (pid 46330)
+[ok]: Check for memory leaks (pid 45601)
+[12/42 done]: unit/type/string (40 seconds)
+Testing integration/convert-zipmap-hash-on-load
+[ok]: AOF+EXPIRE: Server should have been started
+[ok]: AOF+EXPIRE: List should be empty
+[ok]: RDB load zipmap hash: converts to ziplist
+[ok]: Check for memory leaks (pid 45889)
+[ok]: AOF rewrite of hash with hashtable encoding, int data
+[ok]: AOF rewrite of zset with ziplist encoding, string data
+[ok]: ZRANGEBYSCORE fuzzy test, 100 ranges in 100 element sorted set - skiplist
+[ok]: Check for memory leaks (pid 45587)
+[13/42 done]: unit/type/set (43 seconds)
+Testing integration/logging
+[ok]: Check for memory leaks (pid 46505)
+[ok]: AOF rewrite of zset with skiplist encoding, string data
+[ok]: Check for memory leaks (pid 46526)
+[ok]: Server should not start if RDB file can't be open
+[ok]: Server is able to generate a stack trace on selected systems
+[ok]: Check for memory leaks (pid 46548)
+[ok]: Server should not start if RDB is corrupted
+[14/42 done]: integration/rdb (12 seconds)
+Testing unit/pubsub
+[ok]: Redis should not try to convert DEL into EXPIREAT for EXPIRE -1
+[ok]: Pub/Sub PING
+[ok]: PUBLISH/SUBSCRIBE basics
+[ok]: PUBLISH/SUBSCRIBE with two clients
+[ok]: PUBLISH/SUBSCRIBE after UNSUBSCRIBE without arguments
+[ok]: SUBSCRIBE to one channel more than once
+[ok]: UNSUBSCRIBE from non-subscribed channels
+[ok]: PUBLISH/PSUBSCRIBE basics
+[ok]: PUBLISH/PSUBSCRIBE with two clients
+[ok]: PUBLISH/PSUBSCRIBE after PUNSUBSCRIBE without arguments
+[ok]: PUNSUBSCRIBE from non-subscribed channels
+[ok]: NUMSUB returns numbers, not strings (#1561)
+[ok]: Mix SUBSCRIBE and PSUBSCRIBE
+[ok]: PUNSUBSCRIBE and UNSUBSCRIBE should always reply
+[ok]: Keyspace notifications: we receive keyspace notifications
+[ok]: Keyspace notifications: we receive keyevent notifications
+[ok]: Keyspace notifications: we can receive both kind of events
+[ok]: Keyspace notifications: we are able to mask events
+[ok]: Keyspace notifications: general events test
+[ok]: Keyspace notifications: list events test
+[ok]: Keyspace notifications: set events test
+[ok]: Keyspace notifications: zset events test
+[ok]: RDB load zipmap hash: converts to hash table when hash-max-ziplist-entries is exceeded
+[ok]: Keyspace notifications: hash events test
+[ok]: Check for memory leaks (pid 45879)
+[ok]: Keyspace notifications: expired events (triggered expire)
+[ok]: AOF rewrite of zset with ziplist encoding, int data
+[ok]: Keyspace notifications: expired events (background expire)
+[ok]: Keyspace notifications: evicted events
+[ok]: Keyspace notifications: test CONFIG GET/SET of event flags
+[ok]: ZRANGEBYLEX fuzzy test, 100 ranges in 100 element sorted set - skiplist
+[ok]: PIPELINING stresser (also a regression for the old epoll bug)
+[ok]: APPEND basics
+[ok]: APPEND basics, integer encoded values
+[ok]: Test replication partial resync: no backlog (diskless: no, reconnect: 1)
+[ok]: First server should have role slave after SLAVEOF
+[ok]: AOF rewrite of zset with skiplist encoding, int data
+[ok]: BGREWRITEAOF is delayed if BGSAVE is in progress
+[ok]: BGREWRITEAOF is refused if already in progress
+[ok]: ZREMRANGEBYLEX fuzzy test, 100 ranges in 100 element sorted set - skiplist
+[ok]: ZSETs skiplist implementation backlink consistency test - skiplist
+[ok]: APPEND fuzzing
+[ok]: Check for memory leaks (pid 46628)
+[15/42 done]: integration/logging (4 seconds)
+Testing unit/slowlog
+[ok]: Check for memory leaks (pid 46662)
+[16/42 done]: integration/aof (27 seconds)
+Testing unit/scripting
+[ok]: Check for memory leaks (pid 46676)
+[ok]: Check for memory leaks (pid 46686)
+[ok]: SLOWLOG - check that it starts with an empty log
+[17/42 done]: unit/pubsub (3 seconds)
+Testing unit/maxmemory
+[ok]: EVAL - Does Lua interpreter replies to our requests?
+[ok]: EVAL - Lua integer -> Redis protocol type conversion
+[ok]: EVAL - Lua string -> Redis protocol type conversion
+[ok]: EVAL - Lua true boolean -> Redis protocol type conversion
+[ok]: EVAL - Lua false boolean -> Redis protocol type conversion
+[ok]: EVAL - Lua status code reply -> Redis protocol type conversion
+[ok]: EVAL - Lua error reply -> Redis protocol type conversion
+[ok]: EVAL - Lua table -> Redis protocol type conversion
+[ok]: EVAL - Are the KEYS and ARGV arrays populated correctly?
+[ok]: EVAL - is Lua able to call Redis API?
+[ok]: EVALSHA - Can we call a SHA1 if already defined?
+[ok]: EVALSHA - Can we call a SHA1 in uppercase?
+[ok]: EVALSHA - Do we get an error on invalid SHA1?
+[ok]: EVALSHA - Do we get an error on non defined SHA1?
+[ok]: EVAL - Redis integer -> Lua type conversion
+[ok]: EVAL - Redis bulk -> Lua type conversion
+[ok]: EVAL - Redis multi bulk -> Lua type conversion
+[ok]: EVAL - Redis status reply -> Lua type conversion
+[ok]: EVAL - Redis error reply -> Lua type conversion
+[ok]: EVAL - Redis nil bulk reply -> Lua type conversion
+[ok]: EVAL - Is the Lua client using the currently selected DB?
+[ok]: EVAL - SELECT inside Lua should not affect the caller
+[ok]: EVAL - Scripts can't run certain commands
+[ok]: EVAL - Scripts can't run certain commands
+[ok]: EVAL - No arguments to redis.call/pcall is considered an error
+[ok]: EVAL - redis.call variant raises a Lua error on Redis cmd error (1)
+[ok]: EVAL - redis.call variant raises a Lua error on Redis cmd error (1)
+[ok]: EVAL - redis.call variant raises a Lua error on Redis cmd error (1)
+[ok]: EVAL - JSON numeric decoding
+[ok]: EVAL - JSON string decoding
+[ok]: EVAL - cmsgpack can pack double?
+[ok]: EVAL - cmsgpack can pack negative int64?
+[ok]: EVAL - cmsgpack can pack and unpack circular references?
+[ok]: EVAL - Numerical sanity check from bitop
+[ok]: EVAL - Verify minimal bitop functionality
+[ok]: EVAL - Able to parse trailing comments
+[ok]: SCRIPTING FLUSH - is able to clear the scripts cache?
+[ok]: SCRIPT EXISTS - can detect already defined scripts?
+[ok]: SCRIPT LOAD - is able to register scripts in the scripting cache
+[ok]: In the context of Lua the output of random commands gets ordered
+[ok]: SORT is normally not alpha re-ordered for the scripting engine
+[ok]: SORT BY <constant> output gets ordered for scripting
+[ok]: SORT BY <constant> with GET gets ordered for scripting
+[ok]: redis.sha1hex() implementation
+[ok]: Globals protection reading an undeclared global variable
+[ok]: Globals protection setting an undeclared global*
+[ok]: Test an example script DECR_IF_GT
+[ok]: Scripting engine resets PRNG at every script execution
+[ok]: Scripting engine PRNG can be seeded correctly
+[ok]: SLOWLOG - only logs commands taking more time than specified
+[ok]: SLOWLOG - max entries is correctly handled
+[ok]: SLOWLOG - GET optional argument to limit output len works
+[ok]: SLOWLOG - RESET subcommand works
+[ok]: Without maxmemory small integers are shared
+[ok]: With maxmemory and non-LRU policy integers are still shared
+[ok]: With maxmemory and LRU policy integers are not shared
+[ok]: RDB load zipmap hash: converts to hash table when hash-max-ziplist-value is exceeded
+[ok]: FLUSHDB
+[ok]: Perform a final SAVE to leave a clean DB on disk
+[ok]: SLOWLOG - logged entry sanity check
+[ok]: SLOWLOG - commands with too many arguments are trimmed
+[ok]: SLOWLOG - too long arguments are trimmed
+[ok]: Check for memory leaks (pid 46418)
+[ok]: SLOWLOG - EXEC is not logged, just executed commands
+[ok]: Check for memory leaks (pid 46218)
+[18/42 done]: unit/aofrw (44 seconds)
+Testing unit/introspection
+[ok]: CLIENT LIST
+[ok]: MONITOR can log executed commands
+[ok]: MONITOR can log commands issued by the scripting engine
+[ok]: CLIENT GETNAME should return NIL if name is not assigned
+[ok]: CLIENT LIST shows empty fields for unassigned names
+[ok]: CLIENT SETNAME does not accept spaces
+[ok]: CLIENT SETNAME can assign a name to this connection
+[ok]: CLIENT SETNAME can change the name of an existing connection
+[ok]: After CLIENT SETNAME, connection can still be closed
+[ok]: maxmemory - is the memory limit honoured? (policy allkeys-random)
+[ok]: Check for memory leaks (pid 46790)
+[ok]: Check for memory leaks (pid 45686)
+[19/42 done]: integration/convert-zipmap-hash-on-load (11 seconds)
+Testing unit/introspection-2
+[20/42 done]: unit/other (50 seconds)
+Testing unit/limits
+[ok]: maxmemory - is the memory limit honoured? (policy allkeys-lru)
+[ok]: Check for memory leaks (pid 46759)
+[21/42 done]: unit/slowlog (4 seconds)
+Testing unit/obuf-limits
+[ok]: LTRIM stress testing - linkedlist
+[ok]: Check for memory leaks (pid 46412)
+[ok]: EVAL does not leak in the Lua stack
+[ok]: EVAL processes writes from AOF in read-only slaves
+[ok]: We can call scripts rewriting client->argv from Lua
+[ok]: Check if maxclients works refusing connections
+[ok]: Call Redis command with many args from Lua (issue #1764)
+[ok]: Number conversion precision test (issue #1118)
+[ok]: String containing number precision test (regression of issue #1118)
+[ok]: Verify negative arg count is error instead of crash (issue #1842)
+[ok]: Correct handling of reused argv (issue #1939)
+[ok]: Functions in the Redis namespace are able to report errors
+[ok]: ZSETs ZRANK augmented skip list stress testing - skiplist
+[ok]: maxmemory - is the memory limit honoured? (policy volatile-lru)
+[ok]: Big Hash table: SORT BY key
+[ok]: Big Hash table: SORT BY key with limit
+[ok]: Check for memory leaks (pid 46837)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[22/42 done]: unit/introspection (4 seconds)
+Testing unit/bitops
+[ok]: BITCOUNT returns 0 against non existing key
+[ok]: BITCOUNT returns 0 with out of range indexes
+[ok]: BITCOUNT returns 0 with negative indexes where start > end
+[ok]: BITCOUNT against test vector #1
+[ok]: BITCOUNT against test vector #2
+[ok]: BITCOUNT against test vector #3
+[ok]: BITCOUNT against test vector #4
+[ok]: BITCOUNT against test vector #5
+[ok]: TTL and TYPYE do not alter the last access time of a key
+[ok]: maxmemory - is the memory limit honoured? (policy volatile-random)
+[ok]: Check for memory leaks (pid 45616)
+[23/42 done]: unit/type/zset (55 seconds)
+Testing unit/bitfield
+[ok]: Check for memory leaks (pid 46871)
+[ok]: BITCOUNT fuzzing without start/end
+[24/42 done]: unit/limits (4 seconds)
+Testing unit/geo
+[ok]: BITFIELD signed SET and GET basics
+[ok]: BITFIELD unsigned SET and GET basics
+[ok]: BITFIELD #<idx> form
+[ok]: BITFIELD basic INCRBY form
+[ok]: BITFIELD chaining of multiple commands
+[ok]: BITFIELD unsigned overflow wrap
+[ok]: BITFIELD unsigned overflow sat
+[ok]: BITFIELD signed overflow wrap
+[ok]: BITFIELD signed overflow sat
+[ok]: GEOADD create
+[ok]: GEOADD update
+[ok]: GEOADD invalid coordinates
+[ok]: GEOADD multi add
+[ok]: Check geoset values
+[ok]: GEORADIUS simple (sorted)
+[ok]: GEORADIUS withdist (sorted)
+[ok]: GEORADIUS with COUNT
+[ok]: GEORADIUS with COUNT but missing integer argument
+[ok]: GEORADIUS with COUNT DESC
+[ok]: GEORADIUS HUGE, issue #2767
+[ok]: GEORADIUSBYMEMBER simple (sorted)
+[ok]: GEORADIUSBYMEMBER withdist (sorted)
+[ok]: GEOHASH is able to return geohash strings
+[ok]: GEOPOS simple
+[ok]: GEOPOS missing element
+[ok]: GEODIST simple & unit
+[ok]: GEODIST missing elements
+[ok]: GEORADIUS STORE option: syntax error
+[ok]: GEORANGE STORE option: incompatible options
+[ok]: GEORANGE STORE option: plain usage
+[ok]: Check for memory leaks (pid 46767)
+[ok]: GEORANGE STOREDIST option: plain usage
+[ok]: GEORANGE STOREDIST option: COUNT ASC and DESC
+[ok]: Timedout read-only scripts can be killed by SCRIPT KILL
+[ok]: maxmemory - is the memory limit honoured? (policy volatile-ttl)
+[ok]: Timedout script link is still usable after Lua returns
+[ok]: BITCOUNT fuzzing with start/end
+[ok]: BITCOUNT with start, end
+[ok]: BITCOUNT syntax error #1
+[ok]: BITCOUNT regression test for github issue #582
+[ok]: BITCOUNT misaligned prefix
+[ok]: BITCOUNT misaligned prefix + full words + remainder
+[ok]: BITOP NOT (empty string)
+[ok]: BITOP NOT (known string)
+[ok]: BITOP where dest and target are the same key
+[ok]: BITOP AND|OR|XOR don't change the string with single input key
+[ok]: BITOP missing key is considered a stream of zero
+[ok]: BITOP shorter keys are zero-padded to the key with max length
+[ok]: Connect multiple slaves at the same time (issue #141), diskless=no
+[ok]: BITFIELD overflow detection fuzzing
+[ok]: TOUCH alters the last access time of a key
+[ok]: TOUCH returns the number of existing keys specified
+[ok]: Timedout scripts that modified data can't be killed by SCRIPT KILL
+[ok]: SHUTDOWN NOSAVE can kill a timedout script anyway
+[ok]: Check for memory leaks (pid 46984)
+[ok]: Before the slave connects we issue two EVAL commands (scripts replication)
+[ok]: Connect a slave to the master instance (scripts replication)
+[ok]: Now use EVALSHA against the master, with both SHAs (scripts replication)
+[ok]: If EVALSHA was replicated as EVAL, 'x' should be '4' (scripts replication)
+[ok]: Replication of script multiple pushes to list with BLPOP (scripts replication)
+[ok]: EVALSHA replication when first call is readonly (scripts replication)
+[ok]: Lua scripts using SELECT are replicated correctly (scripts replication)
+[ok]: MASTER and SLAVE dataset should be identical after complex ops
+[ok]: Big Hash table: SORT BY hash field
+[ok]: maxmemory - only allkeys-* should remove non-volatile keys (allkeys-random)
+[ok]: SORT GET #
+[ok]: SORT GET <const>
+[ok]: SORT GET (key and hash) with sanity check
+[ok]: SORT BY key STORE
+[ok]: SORT BY hash field STORE
+[ok]: SORT extracts STORE correctly
+[ok]: SORT extracts multiple STORE correctly
+[ok]: SORT DESC
+[ok]: SORT ALPHA against integer encoded strings
+[ok]: SORT sorted set
+[ok]: SORT sorted set BY nosort should retain ordering
+[ok]: SORT sorted set BY nosort + LIMIT
+[ok]: SORT sorted set BY nosort works as expected from scripts
+[ok]: SORT sorted set: +inf and -inf handling
+[ok]: SORT regression for issue #19, sorting floats
+[ok]: SORT with STORE returns zero if result is empty (github issue 224)
+[ok]: SORT with STORE does not create empty lists (github issue 224)
+[ok]: SORT with STORE removes key if result is empty (github issue 227)
+[ok]: SORT with BY <constant> and STORE should still order output
+[ok]: SORT will complain with numerical sorting and bad doubles (1)
+[ok]: SORT will complain with numerical sorting and bad doubles (2)
+[ok]: SORT BY sub-sorts lexicographically if score is the same
+[ok]: SORT GET with pattern ending with just -> does not get hash field
+[ok]: SORT by nosort retains native order for lists
+[ok]: SORT by nosort plus store retains native order for lists
+[ok]: SORT by nosort with limit returns based on original list order
+[ok]: SORT speed, 100 element list BY key, 100 times
+[ok]: SORT speed, 100 element list BY hash field, 100 times
+[ok]: SORT speed, 100 element list directly, 100 times
+[ok]: BITFIELD overflow wrap fuzzing
+[ok]: BITFIELD regression for #3221
+[ok]: SORT speed, 100 element list BY <const>, 100 times
+[ok]: Check for memory leaks (pid 46866)
+[25/42 done]: unit/introspection-2 (9 seconds)
+Testing unit/memefficiency
+[ok]: maxmemory - only allkeys-* should remove non-volatile keys (allkeys-lru)
+[ok]: Check for memory leaks (pid 46587)
+[ok]: Check for memory leaks (pid 47009)
+[ok]: Check for memory leaks (pid 45849)
+[ok]: Check for memory leaks (pid 46957)
+[26/42 done]: unit/bitfield (7 seconds)
+Testing unit/hyperloglog
+[ok]: Check for memory leaks (pid 45600)
+[27/42 done]: unit/sort (63 seconds)
+[ok]: Test replication partial resync: ok after delay (diskless: no, reconnect: 1)
+[ok]: maxmemory - only allkeys-* should remove non-volatile keys (volatile-lru)
+[ok]: MIGRATE can correctly transfer large values
+[ok]: BITOP and fuzzing
+[ok]: MIGRATE can correctly transfer hashes
+[ok]: Check for memory leaks (pid 47003)
+[ok]: Memory efficiency with values in range 32
+[ok]: Before the slave connects we issue two EVAL commands (commmands replication)
+[ok]: Check for memory leaks (pid 45837)
+[ok]: Check for memory leaks (pid 46577)
+[28/42 done]: integration/replication-2 (59 seconds)
+[ok]: MIGRATE timeout actually works
+[ok]: MIGRATE can migrate multiple keys at once
+[ok]: MIGRATE with multiple keys must have empty key arg
+[ok]: MIGRATE with mutliple keys migrate just existing ones
+[ok]: Connect a slave to the master instance (commmands replication)
+[ok]: Now use EVALSHA against the master, with both SHAs (commmands replication)
+[ok]: If EVALSHA was replicated as EVAL, 'x' should be '4' (commmands replication)
+[ok]: Replication of script multiple pushes to list with BLPOP (commmands replication)
+[ok]: EVALSHA replication when first call is readonly (commmands replication)
+[ok]: Lua scripts using SELECT are replicated correctly (commmands replication)
+[ok]: maxmemory - only allkeys-* should remove non-volatile keys (volatile-random)
+[ok]: MIGRATE with multiple keys: stress command rewriting
+[ok]: Check for memory leaks (pid 46908)
+[ok]: MIGRATE with multiple keys: delete just ack keys
+[ok]: maxmemory - only allkeys-* should remove non-volatile keys (volatile-ttl)
+[ok]: Memory efficiency with values in range 64
+[ok]: HyperLogLog self test passes
+[ok]: PFADD without arguments creates an HLL value
+[ok]: Approximated cardinality after creation is zero
+[ok]: PFADD returns 1 when at least 1 reg was modified
+[ok]: PFADD returns 0 when no reg was modified
+[ok]: PFADD works with empty string (regression)
+[ok]: PFCOUNT returns approximated cardinality of set
+[ok]: Check for memory leaks (pid 46567)
+[ok]: Check for memory leaks (pid 47191)
+[ok]: Check for memory leaks (pid 45584)
+[29/42 done]: unit/dump (69 seconds)
+[ok]: maxmemory - policy volatile-lru should only remove volatile keys.
+[ok]: BITOP or fuzzing
+[ok]: ziplist implementation: encoding stress testing
+[ok]: Check for memory leaks (pid 47182)
+[ok]: Check for memory leaks (pid 46900)
+[ok]: Check for memory leaks (pid 46540)
+[ok]: maxmemory - policy volatile-random should only remove volatile keys.
+[ok]: Memory efficiency with values in range 128
+[ok]: HyperLogLogs are promote from sparse to dense
+[ok]: Connect a slave to the master instance
+[ok]: Redis.replicate_commands() must be issued before any write
+[ok]: Redis.replicate_commands() must be issued before any write (2)
+[ok]: Redis.set_repl() must be issued after replicate_commands()
+[ok]: Redis.set_repl() don't accept invalid values
+[ok]: Test selective replication of certain Redis commands from Lua
+[ok]: PRNG is seeded randomly for command replication
+[ok]: Using side effects is not a problem with command replication
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Client output buffer hard limit is enforced
+[ok]: maxmemory - policy volatile-ttl should only remove volatile keys.
+[ok]: Check for memory leaks (pid 45588)
+[30/42 done]: unit/type/list-3 (74 seconds)
+[ok]: Check for memory leaks (pid 47371)
+[ok]: BITOP xor fuzzing
+[ok]: BITOP NOT fuzzing
+[ok]: BITOP with integer encoded source objects
+[ok]: BITOP with non string source key
+[ok]: BITOP with empty string after non empty string (issue #529)
+[ok]: BITPOS bit=0 with empty key returns 0
+[ok]: BITPOS bit=1 with empty key returns -1
+[ok]: BITPOS bit=0 with string less than 1 word works
+[ok]: BITPOS bit=1 with string less than 1 word works
+[ok]: BITPOS bit=0 starting at unaligned address
+[ok]: BITPOS bit=1 starting at unaligned address
+[ok]: BITPOS bit=0 unaligned+full word+reminder
+[ok]: BITPOS bit=1 unaligned+full word+reminder
+[ok]: BITPOS bit=1 returns -1 if string is all 0 bits
+[ok]: BITPOS bit=0 works with intervals
+[ok]: BITPOS bit=1 works with intervals
+[ok]: BITPOS bit=0 changes behavior if end is given
+[ok]: Check for memory leaks (pid 46786)
+[ok]: Memory efficiency with values in range 1024
+[31/42 done]: unit/maxmemory (29 seconds)
+[ok]: BITPOS bit=1 fuzzy testing using SETBIT
+[ok]: Check for memory leaks (pid 47359)
+[32/42 done]: unit/scripting (30 seconds)
+[ok]: BITPOS bit=0 fuzzy testing using SETBIT
+[ok]: HyperLogLog sparse encoding stress test
+[ok]: Corrupted sparse HyperLogLogs are detected: Additionl at tail
+[ok]: Corrupted sparse HyperLogLogs are detected: Broken magic
+[ok]: Corrupted sparse HyperLogLogs are detected: Invalid encoding
+[ok]: Corrupted dense HyperLogLogs are detected: Wrong length
+[ok]: PFADD, PFCOUNT, PFMERGE type checking works
+[ok]: PFMERGE results on the cardinality of union of sets
+[ok]: Check for memory leaks (pid 46938)
+[33/42 done]: unit/bitops (27 seconds)
+[ok]: Test replication partial resync: backlog expired (diskless: no, reconnect: 1)
+[ok]: Check for memory leaks (pid 47393)
+[ok]: Memory efficiency with values in range 16384
+[ok]: Check for memory leaks (pid 47375)
+[ok]: Connect multiple slaves at the same time (issue #141), diskless=yes
+[ok]: Check for memory leaks (pid 47047)
+[34/42 done]: unit/memefficiency (29 seconds)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Test replication partial resync: no reconnection, just sync (diskless: yes, reconnect: 0)
+[ok]: LTRIM stress testing - ziplist
+[ok]: Client output buffer soft limit is not enforced if time is not overreached
+[ok]: Check for memory leaks (pid 47551)
+[ok]: Check for memory leaks (pid 45586)
+[35/42 done]: unit/type/list-2 (93 seconds)
+[ok]: Check for memory leaks (pid 47428)
+[ok]: Check for memory leaks (pid 47545)
+[ok]: Check for memory leaks (pid 47421)
+[ok]: Check for memory leaks (pid 47415)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: PFCOUNT multiple-keys merge returns cardinality of union #1
+[ok]: Check for memory leaks (pid 47397)
+[ok]: MASTER and SLAVE consistency with EVALSHA replication
+[36/42 done]: integration/replication (93 seconds)
+[ok]: Check for memory leaks (pid 46719)
+[ok]: Test replication partial resync: ok psync (diskless: yes, reconnect: 1)
+[ok]: Check for memory leaks (pid 46709)
+[ok]: PFCOUNT multiple-keys merge returns cardinality of union #2
+[37/42 done]: integration/replication-3 (96 seconds)
+[ok]: Check for memory leaks (pid 47669)
+[ok]: GEOADD + GEORANGE randomized test
+[ok]: Check for memory leaks (pid 47663)
+[ok]: Check for memory leaks (pid 46967)
+[38/42 done]: unit/geo (51 seconds)
+[ok]: Client output buffer soft limit is enforced if time is overreached
+[ok]: PFDEBUG GETREG returns the HyperLogLog raw registers
+[ok]: PFADD / PFCOUNT cache invalidation works
+[ok]: Check for memory leaks (pid 46888)
+[ok]: Check for memory leaks (pid 47121)
+[39/42 done]: unit/obuf-limits (57 seconds)
+[40/42 done]: unit/hyperloglog (46 seconds)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Replication: commands with many arguments (issue #1221)
+[ok]: Replication of SPOP command -- alsoPropagate() API
+[ok]: Check for memory leaks (pid 46373)
+[ok]: Check for memory leaks (pid 46359)
+[41/42 done]: integration/replication-4 (110 seconds)
+[ok]: Test replication partial resync: no backlog (diskless: yes, reconnect: 1)
+[ok]: Check for memory leaks (pid 47807)
+[ok]: Check for memory leaks (pid 47801)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Test replication partial resync: ok after delay (diskless: yes, reconnect: 1)
+[ok]: Check for memory leaks (pid 47950)
+[ok]: Check for memory leaks (pid 47944)
+[ok]: Slave should be able to synchronize with the master
+[ok]: Detect write load to master
+[ok]: Test replication partial resync: backlog expired (diskless: yes, reconnect: 1)
+[ok]: Check for memory leaks (pid 48005)
+[ok]: Check for memory leaks (pid 47999)
+[42/42 done]: integration/replication-psync (140 seconds)
+
+                   The End
+
+Execution time of different units:
+  1 seconds - unit/printver
+  4 seconds - unit/type/incr
+  4 seconds - unit/keyspace
+  5 seconds - unit/scan
+  6 seconds - unit/auth
+  2 seconds - unit/quit
+  4 seconds - unit/multi
+  8 seconds - unit/protocol
+  13 seconds - unit/expire
+  20 seconds - unit/type/list
+  32 seconds - unit/type/hash
+  40 seconds - unit/type/string
+  43 seconds - unit/type/set
+  12 seconds - integration/rdb
+  4 seconds - integration/logging
+  27 seconds - integration/aof
+  3 seconds - unit/pubsub
+  44 seconds - unit/aofrw
+  11 seconds - integration/convert-zipmap-hash-on-load
+  50 seconds - unit/other
+  4 seconds - unit/slowlog
+  4 seconds - unit/introspection
+  55 seconds - unit/type/zset
+  4 seconds - unit/limits
+  9 seconds - unit/introspection-2
+  7 seconds - unit/bitfield
+  63 seconds - unit/sort
+  59 seconds - integration/replication-2
+  69 seconds - unit/dump
+  74 seconds - unit/type/list-3
+  29 seconds - unit/maxmemory
+  30 seconds - unit/scripting
+  27 seconds - unit/bitops
+  29 seconds - unit/memefficiency
+  93 seconds - unit/type/list-2
+  93 seconds - integration/replication
+  96 seconds - integration/replication-3
+  51 seconds - unit/geo
+  57 seconds - unit/obuf-limits
+  46 seconds - unit/hyperloglog
+  110 seconds - integration/replication-4
+  140 seconds - integration/replication-psync
+
+\o/ All tests passed without errors!
+
+Cleanup: may take some time... OK
+Rithiks-Air:redis-stable rithikjain$ ls
+00-RELEASENOTES		COPYING			Makefile		redis.conf		runtest-sentinel	tests
+BUGS			INSTALL			README.md		runtest			sentinel.conf		utils
+CONTRIBUTING		MANIFESTO		deps			runtest-cluster		src
+Rithiks-Air:redis-stable rithikjain$ cd src/
+Rithiks-Air:src rithikjain$ redis-server
+-bash: redis-server: command not found
+Rithiks-Air:src rithikjain$ ls
+Makefile		bitops.c		dict.h			lzf_c.o			quicklist.o		redis-trib.rb		setproctitle.c		t_set.o
+Makefile.dep		bitops.o		dict.o			lzf_d.c			rand.c			redisassert.h		setproctitle.o		t_string.c
+adlist.c		blocked.c		endianconv.c		lzf_d.o			rand.h			release.c		sha1.c			t_string.o
+adlist.h		blocked.o		endianconv.h		memtest.c		rand.o			release.h		sha1.h			t_zset.c
+adlist.o		cluster.c		endianconv.o		memtest.o		rdb.c			release.o		sha1.o			t_zset.o
+ae.c			cluster.h		fmacros.h		mkreleasehdr.sh		rdb.h			replication.c		slowlog.c		testhelp.h
+ae.h			cluster.o		geo.c			multi.c			rdb.o			replication.o		slowlog.h		util.c
+ae.o			config.c		geo.h			multi.o			redis-benchmark		rio.c			slowlog.o		util.h
+ae_epoll.c		config.h		geo.o			networking.c		redis-benchmark.c	rio.h			solarisfixes.h		util.o
+ae_evport.c		config.o		help.h			networking.o		redis-benchmark.o	rio.o			sort.c			valgrind.sup
+ae_kqueue.c		crc16.c			hyperloglog.c		notify.c		redis-check-aof		scripting.c		sort.o			version.h
+ae_select.c		crc16.o			hyperloglog.o		notify.o		redis-check-aof.c	scripting.o		sparkline.c		ziplist.c
+anet.c			crc64.c			intset.c		object.c		redis-check-aof.o	sds.c			sparkline.h		ziplist.h
+anet.h			crc64.h			intset.h		object.o		redis-check-rdb		sds.h			sparkline.o		ziplist.o
+anet.o			crc64.o			intset.o		pqsort.c		redis-check-rdb.c	sds.o			syncio.c		zipmap.c
+aof.c			db.c			latency.c		pqsort.h		redis-check-rdb.o	sdsalloc.h		syncio.o		zipmap.h
+aof.o			db.o			latency.h		pqsort.o		redis-cli		sentinel.c		t_hash.c		zipmap.o
+asciilogo.h		debug.c			latency.o		pubsub.c		redis-cli.c		sentinel.o		t_hash.o		zmalloc.c
+bio.c			debug.o			lzf.h			pubsub.o		redis-cli.o		server.c		t_list.c		zmalloc.h
+bio.h			debugmacro.h		lzfP.h			quicklist.c		redis-sentinel		server.h		t_list.o		zmalloc.o
+bio.o			dict.c			lzf_c.c			quicklist.h		redis-server		server.o		t_set.c
+Rithiks-Air:src rithikjain$ ./redis-server 
+48060:C 04 Dec 09:52:18.117 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+48060:M 04 Dec 09:52:18.119 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.5 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 48060
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+48060:M 04 Dec 09:52:18.120 # Server started, Redis version 3.2.5
+48060:M 04 Dec 09:52:18.120 * The server is now ready to accept connections on port 6379
+^C48060:signal-handler (1480873955) Received SIGINT scheduling shutdown...
+48060:M 04 Dec 09:52:35.526 # User requested shutdown...
+48060:M 04 Dec 09:52:35.526 * Saving the final RDB snapshot before exiting.
+48060:M 04 Dec 09:52:35.528 * DB saved on disk
+48060:M 04 Dec 09:52:35.529 # Redis is now ready to exit, bye bye...
+Rithiks-Air:src rithikjain$ ls
+Makefile		bitops.c		dict.h			lzf_c.c			quicklist.h		redis-server		server.o		t_set.c
+Makefile.dep		bitops.o		dict.o			lzf_c.o			quicklist.o		redis-trib.rb		setproctitle.c		t_set.o
+adlist.c		blocked.c		dump.rdb		lzf_d.c			rand.c			redisassert.h		setproctitle.o		t_string.c
+adlist.h		blocked.o		endianconv.c		lzf_d.o			rand.h			release.c		sha1.c			t_string.o
+adlist.o		cluster.c		endianconv.h		memtest.c		rand.o			release.h		sha1.h			t_zset.c
+ae.c			cluster.h		endianconv.o		memtest.o		rdb.c			release.o		sha1.o			t_zset.o
+ae.h			cluster.o		fmacros.h		mkreleasehdr.sh		rdb.h			replication.c		slowlog.c		testhelp.h
+ae.o			config.c		geo.c			multi.c			rdb.o			replication.o		slowlog.h		util.c
+ae_epoll.c		config.h		geo.h			multi.o			redis-benchmark		rio.c			slowlog.o		util.h
+ae_evport.c		config.o		geo.o			networking.c		redis-benchmark.c	rio.h			solarisfixes.h		util.o
+ae_kqueue.c		crc16.c			help.h			networking.o		redis-benchmark.o	rio.o			sort.c			valgrind.sup
+ae_select.c		crc16.o			hyperloglog.c		notify.c		redis-check-aof		scripting.c		sort.o			version.h
+anet.c			crc64.c			hyperloglog.o		notify.o		redis-check-aof.c	scripting.o		sparkline.c		ziplist.c
+anet.h			crc64.h			intset.c		object.c		redis-check-aof.o	sds.c			sparkline.h		ziplist.h
+anet.o			crc64.o			intset.h		object.o		redis-check-rdb		sds.h			sparkline.o		ziplist.o
+aof.c			db.c			intset.o		pqsort.c		redis-check-rdb.c	sds.o			syncio.c		zipmap.c
+aof.o			db.o			latency.c		pqsort.h		redis-check-rdb.o	sdsalloc.h		syncio.o		zipmap.h
+asciilogo.h		debug.c			latency.h		pqsort.o		redis-cli		sentinel.c		t_hash.c		zipmap.o
+bio.c			debug.o			latency.o		pubsub.c		redis-cli.c		sentinel.o		t_hash.o		zmalloc.c
+bio.h			debugmacro.h		lzf.h			pubsub.o		redis-cli.o		server.c		t_list.c		zmalloc.h
+bio.o			dict.c			lzfP.h			quicklist.c		redis-sentinel		server.h		t_list.o		zmalloc.o
+Rithiks-Air:src rithikjain$ cd ..
+Rithiks-Air:redis-stable rithikjain$ ls
+00-RELEASENOTES		COPYING			Makefile		redis.conf		runtest-sentinel	tests
+BUGS			INSTALL			README.md		runtest			sentinel.conf		utils
+CONTRIBUTING		MANIFESTO		deps			runtest-cluster		src
+Rithiks-Air:redis-stable rithikjain$ nano redis.conf 
+Rithiks-Air:redis-stable rithikjain$ cd src/
+Rithiks-Air:src rithikjain$ ls
+Makefile		bitops.c		dict.h			lzf_c.c			quicklist.h		redis-server		server.o		t_set.c
+Makefile.dep		bitops.o		dict.o			lzf_c.o			quicklist.o		redis-trib.rb		setproctitle.c		t_set.o
+adlist.c		blocked.c		dump.rdb		lzf_d.c			rand.c			redisassert.h		setproctitle.o		t_string.c
+adlist.h		blocked.o		endianconv.c		lzf_d.o			rand.h			release.c		sha1.c			t_string.o
+adlist.o		cluster.c		endianconv.h		memtest.c		rand.o			release.h		sha1.h			t_zset.c
+ae.c			cluster.h		endianconv.o		memtest.o		rdb.c			release.o		sha1.o			t_zset.o
+ae.h			cluster.o		fmacros.h		mkreleasehdr.sh		rdb.h			replication.c		slowlog.c		testhelp.h
+ae.o			config.c		geo.c			multi.c			rdb.o			replication.o		slowlog.h		util.c
+ae_epoll.c		config.h		geo.h			multi.o			redis-benchmark		rio.c			slowlog.o		util.h
+ae_evport.c		config.o		geo.o			networking.c		redis-benchmark.c	rio.h			solarisfixes.h		util.o
+ae_kqueue.c		crc16.c			help.h			networking.o		redis-benchmark.o	rio.o			sort.c			valgrind.sup
+ae_select.c		crc16.o			hyperloglog.c		notify.c		redis-check-aof		scripting.c		sort.o			version.h
+anet.c			crc64.c			hyperloglog.o		notify.o		redis-check-aof.c	scripting.o		sparkline.c		ziplist.c
+anet.h			crc64.h			intset.c		object.c		redis-check-aof.o	sds.c			sparkline.h		ziplist.h
+anet.o			crc64.o			intset.h		object.o		redis-check-rdb		sds.h			sparkline.o		ziplist.o
+aof.c			db.c			intset.o		pqsort.c		redis-check-rdb.c	sds.o			syncio.c		zipmap.c
+aof.o			db.o			latency.c		pqsort.h		redis-check-rdb.o	sdsalloc.h		syncio.o		zipmap.h
+asciilogo.h		debug.c			latency.h		pqsort.o		redis-cli		sentinel.c		t_hash.c		zipmap.o
+bio.c			debug.o			latency.o		pubsub.c		redis-cli.c		sentinel.o		t_hash.o		zmalloc.c
+bio.h			debugmacro.h		lzf.h			pubsub.o		redis-cli.o		server.c		t_list.c		zmalloc.h
+bio.o			dict.c			lzfP.h			quicklist.c		redis-sentinel		server.h		t_list.o		zmalloc.o
+Rithiks-Air:src rithikjain$ ./redis-server 
+48066:C 04 Dec 09:54:28.952 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+48066:M 04 Dec 09:54:28.953 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.5 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 48066
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+48066:M 04 Dec 09:54:28.955 # Server started, Redis version 3.2.5
+48066:M 04 Dec 09:54:28.955 * DB loaded from disk: 0.000 seconds
+48066:M 04 Dec 09:54:28.955 * The server is now ready to accept connections on port 6379
+^C48066:signal-handler (1480874293) Received SIGINT scheduling shutdown...
+48066:M 04 Dec 09:58:13.183 # User requested shutdown...
+48066:M 04 Dec 09:58:13.183 * Saving the final RDB snapshot before exiting.
+48066:M 04 Dec 09:58:13.185 * DB saved on disk
+48066:M 04 Dec 09:58:13.185 # Redis is now ready to exit, bye bye...
+Rithiks-Air:src rithikjain$ ls
+Makefile		bitops.c		dict.h			lzf_c.c			quicklist.h		redis-server		server.o		t_set.c
+Makefile.dep		bitops.o		dict.o			lzf_c.o			quicklist.o		redis-trib.rb		setproctitle.c		t_set.o
+adlist.c		blocked.c		dump.rdb		lzf_d.c			rand.c			redisassert.h		setproctitle.o		t_string.c
+adlist.h		blocked.o		endianconv.c		lzf_d.o			rand.h			release.c		sha1.c			t_string.o
+adlist.o		cluster.c		endianconv.h		memtest.c		rand.o			release.h		sha1.h			t_zset.c
+ae.c			cluster.h		endianconv.o		memtest.o		rdb.c			release.o		sha1.o			t_zset.o
+ae.h			cluster.o		fmacros.h		mkreleasehdr.sh		rdb.h			replication.c		slowlog.c		testhelp.h
+ae.o			config.c		geo.c			multi.c			rdb.o			replication.o		slowlog.h		util.c
+ae_epoll.c		config.h		geo.h			multi.o			redis-benchmark		rio.c			slowlog.o		util.h
+ae_evport.c		config.o		geo.o			networking.c		redis-benchmark.c	rio.h			solarisfixes.h		util.o
+ae_kqueue.c		crc16.c			help.h			networking.o		redis-benchmark.o	rio.o			sort.c			valgrind.sup
+ae_select.c		crc16.o			hyperloglog.c		notify.c		redis-check-aof		scripting.c		sort.o			version.h
+anet.c			crc64.c			hyperloglog.o		notify.o		redis-check-aof.c	scripting.o		sparkline.c		ziplist.c
+anet.h			crc64.h			intset.c		object.c		redis-check-aof.o	sds.c			sparkline.h		ziplist.h
+anet.o			crc64.o			intset.h		object.o		redis-check-rdb		sds.h			sparkline.o		ziplist.o
+aof.c			db.c			intset.o		pqsort.c		redis-check-rdb.c	sds.o			syncio.c		zipmap.c
+aof.o			db.o			latency.c		pqsort.h		redis-check-rdb.o	sdsalloc.h		syncio.o		zipmap.h
+asciilogo.h		debug.c			latency.h		pqsort.o		redis-cli		sentinel.c		t_hash.c		zipmap.o
+bio.c			debug.o			latency.o		pubsub.c		redis-cli.c		sentinel.o		t_hash.o		zmalloc.c
+bio.h			debugmacro.h		lzf.h			pubsub.o		redis-cli.o		server.c		t_list.c		zmalloc.h
+bio.o			dict.c			lzfP.h			quicklist.c		redis-sentinel		server.h		t_list.o		zmalloc.o
+Rithiks-Air:src rithikjain$ cd ..
+Rithiks-Air:redis-stable rithikjain$ ls
+00-RELEASENOTES		COPYING			Makefile		redis.conf		runtest-sentinel	tests
+BUGS			INSTALL			README.md		runtest			sentinel.conf		utils
+CONTRIBUTING		MANIFESTO		deps			runtest-cluster		src
+Rithiks-Air:redis-stable rithikjain$ nano redis.conf 
+Rithiks-Air:redis-stable rithikjain$ ./redis-server 
+-bash: ./redis-server: No such file or directory
+Rithiks-Air:redis-stable rithikjain$ cd src/
+Rithiks-Air:src rithikjain$ ls
+Makefile		bitops.c		dict.h			lzf_c.c			quicklist.h		redis-server		server.o		t_set.c
+Makefile.dep		bitops.o		dict.o			lzf_c.o			quicklist.o		redis-trib.rb		setproctitle.c		t_set.o
+adlist.c		blocked.c		dump.rdb		lzf_d.c			rand.c			redisassert.h		setproctitle.o		t_string.c
+adlist.h		blocked.o		endianconv.c		lzf_d.o			rand.h			release.c		sha1.c			t_string.o
+adlist.o		cluster.c		endianconv.h		memtest.c		rand.o			release.h		sha1.h			t_zset.c
+ae.c			cluster.h		endianconv.o		memtest.o		rdb.c			release.o		sha1.o			t_zset.o
+ae.h			cluster.o		fmacros.h		mkreleasehdr.sh		rdb.h			replication.c		slowlog.c		testhelp.h
+ae.o			config.c		geo.c			multi.c			rdb.o			replication.o		slowlog.h		util.c
+ae_epoll.c		config.h		geo.h			multi.o			redis-benchmark		rio.c			slowlog.o		util.h
+ae_evport.c		config.o		geo.o			networking.c		redis-benchmark.c	rio.h			solarisfixes.h		util.o
+ae_kqueue.c		crc16.c			help.h			networking.o		redis-benchmark.o	rio.o			sort.c			valgrind.sup
+ae_select.c		crc16.o			hyperloglog.c		notify.c		redis-check-aof		scripting.c		sort.o			version.h
+anet.c			crc64.c			hyperloglog.o		notify.o		redis-check-aof.c	scripting.o		sparkline.c		ziplist.c
+anet.h			crc64.h			intset.c		object.c		redis-check-aof.o	sds.c			sparkline.h		ziplist.h
+anet.o			crc64.o			intset.h		object.o		redis-check-rdb		sds.h			sparkline.o		ziplist.o
+aof.c			db.c			intset.o		pqsort.c		redis-check-rdb.c	sds.o			syncio.c		zipmap.c
+aof.o			db.o			latency.c		pqsort.h		redis-check-rdb.o	sdsalloc.h		syncio.o		zipmap.h
+asciilogo.h		debug.c			latency.h		pqsort.o		redis-cli		sentinel.c		t_hash.c		zipmap.o
+bio.c			debug.o			latency.o		pubsub.c		redis-cli.c		sentinel.o		t_hash.o		zmalloc.c
+bio.h			debugmacro.h		lzf.h			pubsub.o		redis-cli.o		server.c		t_list.c		zmalloc.h
+bio.o			dict.c			lzfP.h			quicklist.c		redis-sentinel		server.h		t_list.o		zmalloc.o
+Rithiks-Air:src rithikjain$ ./redis-server 
+48089:C 04 Dec 09:59:18.220 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+48089:M 04 Dec 09:59:18.222 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.5 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 48089
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+48089:M 04 Dec 09:59:18.223 # Server started, Redis version 3.2.5
+48089:M 04 Dec 09:59:18.223 * DB loaded from disk: 0.000 seconds
+48089:M 04 Dec 09:59:18.223 * The server is now ready to accept connections on port 6379
+^C48089:signal-handler (1480874434) Received SIGINT scheduling shutdown...
+48089:M 04 Dec 10:00:34.681 # User requested shutdown...
+48089:M 04 Dec 10:00:34.681 * Saving the final RDB snapshot before exiting.
+48089:M 04 Dec 10:00:34.685 * DB saved on disk
+48089:M 04 Dec 10:00:34.685 # Redis is now ready to exit, bye bye...
+Rithiks-Air:src rithikjain$ cd ..
+Rithiks-Air:redis-stable rithikjain$ ls
+00-RELEASENOTES		COPYING			Makefile		redis.conf		runtest-sentinel	tests
+BUGS			INSTALL			README.md		runtest			sentinel.conf		utils
+CONTRIBUTING		MANIFESTO		deps			runtest-cluster		src
+Rithiks-Air:redis-stable rithikjain$ nano redis.conf
+Rithiks-Air:redis-stable rithikjain$ cd src/
+Rithiks-Air:src rithikjain$ ./redis-server 
+48096:C 04 Dec 10:01:25.328 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+48096:M 04 Dec 10:01:25.330 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.5 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 48096
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+48096:M 04 Dec 10:01:25.331 # Server started, Redis version 3.2.5
+48096:M 04 Dec 10:01:25.331 * DB loaded from disk: 0.000 seconds
+48096:M 04 Dec 10:01:25.331 * The server is now ready to accept connections on port 6379
+^C48096:signal-handler (1480874771) Received SIGINT scheduling shutdown...
+48096:M 04 Dec 10:06:11.853 # User requested shutdown...
+48096:M 04 Dec 10:06:11.853 * Saving the final RDB snapshot before exiting.
+48096:M 04 Dec 10:06:11.856 * DB saved on disk
+48096:M 04 Dec 10:06:11.856 # Redis is now ready to exit, bye bye...
+Rithiks-Air:src rithikjain$ clear
+
+Rithiks-Air:src rithikjain$ ./redis-server 
+48128:C 04 Dec 10:06:14.405 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+48128:M 04 Dec 10:06:14.406 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.5 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 48128
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+48128:M 04 Dec 10:06:14.407 # Server started, Redis version 3.2.5
+48128:M 04 Dec 10:06:14.408 * DB loaded from disk: 0.000 seconds
+48128:M 04 Dec 10:06:14.408 * The server is now ready to accept connections on port 6379
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+48128:M 04 Dec 11:06:55.839 * 1 changes in 3600 seconds. Saving...
+48128:M 04 Dec 11:06:55.840 * Background saving started by pid 48489
+48489:C 04 Dec 11:06:55.843 * DB saved on disk
+48128:M 04 Dec 11:06:55.940 * Background saving terminated with success
+48128:M 04 Dec 12:06:56.019 * 1 changes in 3600 seconds. Saving...
+48128:M 04 Dec 12:06:56.019 * Background saving started by pid 48575
+48575:C 04 Dec 12:06:56.027 * DB saved on disk
+48128:M 04 Dec 12:06:56.124 * Background saving terminated with success
+48128:M 04 Dec 12:40:04.498 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 12:40:04.500 * Background saving started by pid 48628
+48628:C 04 Dec 12:40:04.508 * DB saved on disk
+48128:M 04 Dec 12:40:04.601 * Background saving terminated with success
+48128:M 04 Dec 12:55:52.137 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 12:55:52.137 * Background saving started by pid 48654
+48654:C 04 Dec 12:55:52.141 * DB saved on disk
+48128:M 04 Dec 12:55:52.238 * Background saving terminated with success
+48128:M 04 Dec 13:13:32.961 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 13:13:32.962 * Background saving started by pid 48684
+48684:C 04 Dec 13:13:32.973 * DB saved on disk
+48128:M 04 Dec 13:13:33.062 * Background saving terminated with success
+48128:M 04 Dec 13:35:33.109 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 13:35:33.109 * Background saving started by pid 48724
+48724:C 04 Dec 13:35:33.113 * DB saved on disk
+48128:M 04 Dec 13:35:33.214 * Background saving terminated with success
+48128:M 04 Dec 14:03:42.816 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 14:03:42.816 * Background saving started by pid 48757
+48757:C 04 Dec 14:03:42.820 * DB saved on disk
+48128:M 04 Dec 14:03:42.917 * Background saving terminated with success
+48128:M 04 Dec 14:55:09.764 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 14:55:09.765 * Background saving started by pid 48837
+48837:C 04 Dec 14:55:09.776 * DB saved on disk
+48128:M 04 Dec 14:55:09.868 * Background saving terminated with success
+48128:M 04 Dec 15:00:10.098 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:00:10.099 * Background saving started by pid 48848
+48848:C 04 Dec 15:00:10.103 * DB saved on disk
+48128:M 04 Dec 15:00:10.200 * Background saving terminated with success
+48128:M 04 Dec 15:24:08.213 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:24:08.214 * Background saving started by pid 48860
+48860:C 04 Dec 15:24:08.218 * DB saved on disk
+48128:M 04 Dec 15:24:08.314 * Background saving terminated with success
+48128:M 04 Dec 15:42:03.654 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:42:03.654 * Background saving started by pid 48889
+48889:C 04 Dec 15:42:03.657 * DB saved on disk
+48128:M 04 Dec 15:42:03.756 * Background saving terminated with success
+48128:M 04 Dec 15:47:04.098 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:47:04.099 * Background saving started by pid 48904
+48904:C 04 Dec 15:47:04.103 * DB saved on disk
+48128:M 04 Dec 15:47:04.201 * Background saving terminated with success
+48128:M 04 Dec 15:52:05.061 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:52:05.061 * Background saving started by pid 48930
+48930:C 04 Dec 15:52:05.066 * DB saved on disk
+48128:M 04 Dec 15:52:05.166 * Background saving terminated with success
+48128:M 04 Dec 15:57:06.029 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 15:57:06.029 * Background saving started by pid 48958
+48958:C 04 Dec 15:57:06.035 * DB saved on disk
+48128:M 04 Dec 15:57:06.132 * Background saving terminated with success
+48128:M 04 Dec 16:02:07.011 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 16:02:07.012 * Background saving started by pid 48971
+48971:C 04 Dec 16:02:07.019 * DB saved on disk
+48128:M 04 Dec 16:02:07.113 * Background saving terminated with success
+48128:M 04 Dec 16:07:08.061 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 16:07:08.062 * Background saving started by pid 48978
+48978:C 04 Dec 16:07:08.065 * DB saved on disk
+48128:M 04 Dec 16:07:08.163 * Background saving terminated with success
+48128:M 04 Dec 16:14:40.552 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 16:14:40.552 * Background saving started by pid 49001
+49001:C 04 Dec 16:14:40.555 * DB saved on disk
+48128:M 04 Dec 16:14:40.657 * Background saving terminated with success
+48128:M 04 Dec 16:19:41.080 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 16:19:41.080 * Background saving started by pid 49010
+49010:C 04 Dec 16:19:41.085 * DB saved on disk
+48128:M 04 Dec 16:19:41.183 * Background saving terminated with success
+48128:M 04 Dec 17:03:57.064 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 17:03:57.064 * Background saving started by pid 49134
+49134:C 04 Dec 17:03:57.079 * DB saved on disk
+48128:M 04 Dec 17:03:57.164 * Background saving terminated with success
+48128:M 04 Dec 17:04:58.032 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:04:58.033 * Background saving started by pid 49135
+49135:C 04 Dec 17:04:58.036 * DB saved on disk
+48128:M 04 Dec 17:04:58.137 * Background saving terminated with success
+48128:M 04 Dec 17:07:48.694 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:07:48.695 * Background saving started by pid 49136
+49136:C 04 Dec 17:07:48.698 * DB saved on disk
+48128:M 04 Dec 17:07:48.796 * Background saving terminated with success
+48128:M 04 Dec 17:08:49.055 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:08:49.056 * Background saving started by pid 49146
+49146:C 04 Dec 17:08:49.061 * DB saved on disk
+48128:M 04 Dec 17:08:49.156 * Background saving terminated with success
+48128:M 04 Dec 17:10:11.232 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:10:11.233 * Background saving started by pid 49149
+49149:C 04 Dec 17:10:11.236 * DB saved on disk
+48128:M 04 Dec 17:10:11.334 * Background saving terminated with success
+48128:M 04 Dec 17:12:00.351 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:12:00.351 * Background saving started by pid 49151
+49151:C 04 Dec 17:12:00.357 * DB saved on disk
+48128:M 04 Dec 17:12:00.451 * Background saving terminated with success
+48128:M 04 Dec 17:13:01.021 * 10000 changes in 60 seconds. Saving...
+48128:M 04 Dec 17:13:01.021 * Background saving started by pid 49155
+49155:C 04 Dec 17:13:01.025 * DB saved on disk
+48128:M 04 Dec 17:13:01.125 * Background saving terminated with success
+48128:M 04 Dec 17:18:02.040 * 100 changes in 300 seconds. Saving...
+48128:M 04 Dec 17:18:02.040 * Background saving started by pid 49197
+49197:C 04 Dec 17:18:02.045 * DB saved on disk
+48128:M 04 Dec 17:18:02.143 * Background saving terminated with success
+
